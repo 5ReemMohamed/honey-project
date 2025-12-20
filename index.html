@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="loader-overlay">
+        <div class="loader">
+            <video autoplay muted loop>
+                <source src="assets/loader.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <span class="shape"></span>
+        </div>
+    </div>
+
+
+    <section class="hero">
+        <div class="hero-video-wrapper">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="assets/header.mp4" type="video/mp4">
+            </video>
+        </div>
+        <nav class="navbar navbar-expand-lg" id="mainNavbar">
+            <div class="container-lg ">
+                <a class="navbar-brand" href="index.html">
+                    <div class="logo-icon">
+                        <img src="assets/logo.png" height="70" class="w-100 dark-logo">
+                        <img src="assets/light-logo.png" height="70" class="w-100 light-logo">
+                    </div>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto gap-3 text-center">
+                        <li class="nav-item"><a class="nav-link" href="#" data-key="HomeLink">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about" data-key="AboutUs">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" data-key="Products">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" data-key="Partners">Partners</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" data-key="News">News</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" data-key="ContactUs">Contact Us</a></li>
+                    </ul>
+                    <div class="dropdown p-4 p-lg-0 d-flex justify-content-center align-items-center">
+                        <button class="btn btn-warning dropdown-toggle" type="button" id="languageDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Language
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
+                            <li><a class="dropdown-item" href="#" data-lang="ar">Arabic</a></li>
+                            <li><a class="dropdown-item" href="#" data-lang="es">Spanish</a></li>
+                            <li><a class="dropdown-item" href="#" data-lang="fr">French</a></li>
+                        </ul>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </nav>
+        <div class="hero-inner py-5" data-aos="fade-up">
+            <div class="bee-header">
+                <img src="assets/bee.png" alt="bee" class="bee-img">
+                <span data-key="beeText">Honey bees collect nectar</span>
+            </div>
+
+            <h1 class="hero-title" data-key="heroTitle">
+                the best quality <span>Honey from</span> our farm
+            </h1>
+
+            <p class="hero-desc" data-key="heroDesc">
+                Taste the sweetness of nature with our farm-fresh, premium honey.
+            </p>
+            <div class="hero-btns">
+                <a href="#" class="btn primary">
+                    <span data-key="btnPrimary">Explore More</span>
+                    <span class="arrow-circle"><i class="fas fa-arrow-right"></i></span>
+                </a>
+
+                <a href="#" class="btn secondary">
+                    <span data-key="btnSecondary">Explore Products</span>
+                    <span class="arrow-circle"><i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <section class="py-5 about-brief">
+        <div class="container py-5">
+            <div class="wrapper">
+                <div class="bee">
+                    <div class="bee-body">
+                        <div class="blink"></div>
+                        <div class="mouth"></div>
+                        <div class="antenae"></div>
+                        <div class="bee-left"></div>
+                        <div class="bee-right"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="bee2">
+                    <div class="bee-body">
+                        <div class="blink"></div>
+                        <div class="mouth"></div>
+                        <div class="antenae"></div>
+                        <div class="bee-left"></div>
+                        <div class="bee-right"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center align-items-center">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="text p-3">
+                        <h2>Brief About Bee&Honey</h2>
+                        <p class="text-muted">Bee&Honey is a brand under Yemeni Honey House, founded in 2007, with
+                            extensive experience in producing and marketing natural honey to the highest quality
+                            standards.</p>
+                        <p class="text-muted">Bee&Honey was born from our passion for offering modern, natural products
+                            that meet the needs of today's consumer, providing a unique experience that blends flavor
+                            and benefits.</p>
+                        <p class="text-muted">We take great care in selecting our apiaries and use sustainable methods
+                            in our production that protect the environment and safeguard bees. Our products, whether raw
+                            honey or natural honey beverages, reflect our commitment to unmatched quality and true
+                            purity, free from any artificial additives.</p>
+                        <p class="text-muted">At Bee&Honey, we believe that honey is more than just food, it's a
+                            lifestyle that energizes you, strengthens immunity, and naturally supports the body's
+                            balance.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="image">
+                        <img src="assets/brief-image.png" class="w-100" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about-honey py-5" id="about">
+        <div class="container py-5">
+            <div class="row align-items-center g-4 justify-content-center">
+                <div class="col-lg-6 position-relative" data-aos="fade-up">
+                    <div class="about-img-wrapper">
+                        <img src="assets/about-1.jpg" class="img-fluid main-img" alt="Beekeeper">
+
+                        <div class="video-box">
+                            <img src="assets/about-2.jpg" alt="Honey Bee">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="about-content">
+                        <span class="about-subtitle" data-key="aboutSubtitle">About Us</span>
+                        <h2 class="about-title" data-key="aboutTitle">
+                            Sweet <span>Honey Packs</span> Fresh <br> Raw and Honey
+                        </h2>
+
+                        <p class="about-desc text-muted" data-key="aboutDesc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quis minima architecto
+                            amet, autem itaque sapiente fugit asperiores eius qui nesciunt voluptates. Libero
+                            perferendis,
+                            quibusdam molestias laudantium voluptas impedit reprehenderit?
+                        </p>
+
+                        <div class="row mt-4 align-items-center">
+                            <div class="col-md-4">
+                                <div class="experience-box">
+                                    <h3>25+</h3>
+                                    <p class="text-muted" data-key="yearsExperience">Years of Experience</p>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <ul class="about-features d-flex flex-column gap-3 mt-4 mt-lg-0">
+                                    <li class="pure">
+                                        <div class="img">
+                                            <img src="assets/pure.png" alt="pure">
+                                        </div>
+                                        <div>
+                                            <h4 data-key="firstFeatureTitle">Pure Honey</h4>
+                                            <span class="text-muted" data-key="firstFeatureDesc">Collected naturally by
+                                                honey bees.</span>
+                                        </div>
+                                    </li>
+                                    <li class="award">
+                                        <div class="img">
+                                            <img src="assets/award-1.png" alt="award">
+                                        </div>
+                                        <div>
+                                            <h4 data-key="secondFeatureTitle">100% Natural</h4>
+                                            <span class="text-muted" data-key="secondFeatureDesc">No additives, no
+                                                preservatives.</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 categories">
+        <div class="bee-shape">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="57" height="46"
+                viewBox="0 0 57 46">
+                <image width="57" height="46"
+                    xlink:href="data:img/png;base64,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">
+                </image>
+            </svg>
+        </div>
+        <div class="bee-shape-3">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="57" height="46"
+                viewBox="0 0 57 46">
+                <image width="57" height="46"
+                    xlink:href="data:img/png;base64,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">
+                </image>
+            </svg>
+        </div>
+        <div class="bee-shape-4">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="57" height="46"
+                viewBox="0 0 57 46">
+                <image width="57" height="46"
+                    xlink:href="data:img/png;base64,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">
+                </image>
+            </svg>
+        </div>
+        <div class="container py-5">
+            <div class="heading">
+                <h2 data-key="categoriesTitle" data-aos="fade-up">Explore Our Categories</h2>
+            </div>
+            <div class="row g-4 pt-3 mt-3">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <a href="best-hive.html" class="category-box">
+                        <img src="assets/category-1.jpg" alt="Best Hive">
+                        <div class="overlay"></div>
+                        <div class="content">
+                            <span>Explore</span>
+                            <h3>Best Hive</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <a href="shop.html" class="category-box">
+                        <img src="assets/category-2.jpg" alt="Best Sellers">
+                        <div class="overlay"></div>
+                        <div class="content">
+                            <span>Explore</span>
+                            <h3>Best Sellers!</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <a href="learn.html" class="category-box">
+                        <img src="assets/category-3.jpg" alt="Keep Bees">
+                        <div class="overlay"></div>
+                        <div class="content">
+                            <span>Explore</span>
+                            <h3>Keep Bees</h3>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="container honey-shape">
+            <div class="honeydipper">
+                <div class="honeydipper__bulb">
+                    <div class="honey">
+                        <div class="drip"></div>
+                        <div class="drip"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="honeypot">
+                <div class="honeypot__top"></div>
+            </div>
+            <div class="honeypot__shadow"></div>
+        </div>
+    </section>
+
+
+    <section class="certificates-section py-5">
+        <img src="assets/cert-bee.png" class="cert-bee" alt="bee">
+        <img src="assets/jar.png" class="cert-jar" alt="jar">
+        <div class="container">
+            <h2 class="text-center mb-5 py-5" data-aos="fade-up">Our Certificates</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="image">
+                        <img src="assets/certificate-1.jpg" class="img-fluid rounded shadow-sm certificate-img"
+                            alt="Certificate 1" data-bs-toggle="modal" data-bs-target="#certificateModal"
+                            data-bs-img="assets/certificate-1.jpg">
+                        <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
+                            data-bs-img="assets/certificate-1.jpg">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="image">
+                        <img src="assets/certificate-2.jpg" class="img-fluid rounded shadow-sm certificate-img"
+                            alt="Certificate 2" data-bs-toggle="modal" data-bs-target="#certificateModal"
+                            data-bs-img="assets/certificate-2.jpg">
+                        <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
+                            data-bs-img="assets/certificate-2.jpg">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="image">
+                        <img src="assets/certificate-3.jpg" class="img-fluid rounded shadow-sm certificate-img"
+                            alt="Certificate 3" data-bs-toggle="modal" data-bs-target="#certificateModal"
+                            data-bs-img="assets/certificate-3.jpg">
+                        <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
+                            data-bs-img="assets/certificate-3.jpg">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="image">
+                        <img src="assets/certificate-4.jpg" class="img-fluid rounded shadow-sm certificate-img"
+                            alt="Certificate 4" data-bs-toggle="modal" data-bs-target="#certificateModal"
+                            data-bs-img="assets/certificate-4.jpg">
+                        <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
+                            data-bs-img="assets/certificate-4.jpg">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="image">
+                        <img src="assets/certificate-5.jpg" class="img-fluid rounded shadow-sm certificate-img"
+                            alt="Certificate 5" data-bs-toggle="modal" data-bs-target="#certificateModal"
+                            data-bs-img="assets/certificate-5.jpg">
+                        <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
+                            data-bs-img="assets/certificate-5.jpg">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="blogs-news py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Latest Blogs & News</h2>
+                <p class="section-subtitle text-muted">Stay updated with our latest insights and stories</p>
+            </div>
+            <ul class="nav nav-tabs justify-content-center mb-4" id="blogsNewsTab" role="tablist" data-aos="fade-up">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="blogs-tab" data-bs-toggle="tab" data-bs-target="#blogs"
+                        type="button" role="tab" aria-controls="blogs" aria-selected="true">Blogs</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="news-tab" data-bs-toggle="tab" data-bs-target="#news" type="button"
+                        role="tab" aria-controls="news" aria-selected="false">News</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="blogsNewsTabContent">
+                <div class="tab-pane fade show active" id="blogs" role="tabpanel" aria-labelledby="blogs-tab">
+                    <div class="row g-4" data-aos="fade-up">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100">
+                                <div class="img">
+                                    <img src="assets/blog-1.jpg" class="card-img-top" alt="Blog 2">
+                                </div>
+                                <div class="card-body">
+                                    <div class="date d-flex gap-2 align-items-center mb-3">
+                                        <i class="fas fa-calendar-alt"></i> <span>May 21, 2025</span>
+                                    </div>
+                                    <h3 class="card-title mb-3"><a href="">This season, increased yield of honey</a>
+                                    </h3>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+                                        voluptate ea debitis aliquid voluptatem voluptates et quasi consectetur. Ut
+                                        possimus fuga ad culpa doloremque eaque placeat voluptates. Quod, voluptatum
+                                        nam!</p>
+                                    <div class="blog-footer">
+                                        <a href="#" class="blog-link d-flex align-items-center gap-2"> <span>Read
+                                                More</span> <i class="fas fa-arrow-right mt-1"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100">
+                                <div class="img">
+                                    <img src="assets/blog-2.jpg" class="card-img-top" alt="Blog 2">
+                                </div>
+                                <div class="card-body">
+                                    <div class="date d-flex gap-2 align-items-center mb-3">
+                                        <i class="fas fa-calendar-alt"></i> <span> February 21, 2025</span>
+                                    </div>
+                                    <h3 class="card-title mb-3"><a href="">Our beekeepers begin to collect honey</a>
+                                    </h3>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+                                        voluptate ea debitis aliquid voluptatem voluptates et quasi consectetur. Ut
+                                        possimus fuga ad culpa doloremque eaque placeat voluptates. Quod, voluptatum
+                                        nam!</p>
+                                    <div class="blog-footer">
+                                        <a href="#" class="blog-link d-flex align-items-center gap-2"> <span>Read
+                                                More</span> <i class="fas fa-arrow-right mt-1"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100">
+                                <div class="img">
+                                    <img src="assets/blog-3.jpg" class="card-img-top" alt="Blog 2">
+                                </div>
+                                <div class="card-body">
+                                    <div class="date d-flex gap-2 align-items-center mb-3">
+                                        <i class="fas fa-calendar-alt"></i> <span> October 26, 2017</span>
+                                    </div>
+                                    <h3 class="card-title mb-3"><a href="">Definition of the honey naturalness</a>
+                                    </h3>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+                                        voluptate ea debitis aliquid voluptatem voluptates et quasi consectetur. Ut
+                                        possimus fuga ad culpa doloremque eaque placeat voluptates. Quod, voluptatum
+                                        nam!</p>
+                                    <div class="blog-footer">
+                                        <a href="#" class="blog-link d-flex align-items-center gap-2"> <span>Read
+                                                More</span> <i class="fas fa-arrow-right mt-1"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="news" role="tabpanel" aria-labelledby="news-tab">
+                    <div class="row g-4" data-aos="fade-up">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100">
+                                <div class="img">
+                                    <img src="assets/blog-2.jpg" class="card-img-top" alt="Blog 2">
+                                </div>
+                                <div class="card-body">
+                                    <div class="date d-flex gap-2 align-items-center mb-3">
+                                        <i class="fas fa-calendar-alt"></i> <span> February 21, 2025</span>
+                                    </div>
+                                    <h3 class="card-title mb-3"><a href="">Our beekeepers begin to collect honey</a>
+                                    </h3>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+                                        voluptate ea debitis aliquid voluptatem voluptates et quasi consectetur. Ut
+                                        possimus fuga ad culpa doloremque eaque placeat voluptates. Quod, voluptatum
+                                        nam!</p>
+                                    <div class="blog-footer">
+                                        <a href="#" class="blog-link d-flex align-items-center gap-2"> <span>Read
+                                                More</span> <i class="fas fa-arrow-right mt-1"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100">
+                                <div class="img">
+                                    <img src="assets/blog-3.jpg" class="card-img-top" alt="Blog 2">
+                                </div>
+                                <div class="card-body">
+                                    <div class="date d-flex gap-2 align-items-center mb-3">
+                                        <i class="fas fa-calendar-alt"></i> <span> October 26, 2017</span>
+                                    </div>
+                                    <h3 class="card-title mb-3"><a href="">Definition of the honey naturalness</a>
+                                    </h3>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+                                        voluptate ea debitis aliquid voluptatem voluptates et quasi consectetur. Ut
+                                        possimus fuga ad culpa doloremque eaque placeat voluptates. Quod, voluptatum
+                                        nam!</p>
+                                    <div class="blog-footer">
+                                        <a href="#" class="blog-link d-flex align-items-center gap-2"> <span>Read
+                                                More</span> <i class="fas fa-arrow-right mt-1"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100">
+                                <div class="img">
+                                    <img src="assets/blog-1.jpg" class="card-img-top" alt="Blog 2">
+                                </div>
+                                <div class="card-body">
+                                    <div class="date d-flex gap-2 align-items-center mb-3">
+                                        <i class="fas fa-calendar-alt"></i> <span>May 21, 2025</span>
+                                    </div>
+                                    <h3 class="card-title mb-3"><a href="">This season, increased yield of honey</a>
+                                    </h3>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+                                        voluptate ea debitis aliquid voluptatem voluptates et quasi consectetur. Ut
+                                        possimus fuga ad culpa doloremque eaque placeat voluptates. Quod, voluptatum
+                                        nam!</p>
+                                    <div class="blog-footer">
+                                        <a href="#" class="blog-link d-flex align-items-center gap-2"> <span>Read
+                                                More</span> <i class="fas fa-arrow-right mt-1"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="assets/flower3d.png" class="flower" alt="flower">
+        <img src="assets/blog-3-bee.png" class="blog-bee" alt="blog">
+    </section>
+    <div class="modal fade" id="certificateModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Certificate</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="cert-viewer">
+                        <div class="cert-controls">
+                            <button class="btn btn-sm btn-outline-primary" id="zoom-in">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <button class="btn btn-sm btn-outline-primary" id="zoom-out">
+                                <i class="fas fa-search-minus"></i>
+                            </button>
+                        </div>
+                        <div class="cert-image-container">
+                            <img id="modalImage" src="" alt="Certificate" class="cert-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
