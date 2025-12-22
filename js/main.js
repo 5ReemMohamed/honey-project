@@ -1,17 +1,7 @@
-window.addEventListener("load", () => {
-    const overlay = document.getElementById("loader-overlay");
-    if (!overlay) return;
-
-    setTimeout(() => {
-        overlay.classList.add("hide");
-        AOS.init({
-            duration: 1000, // animation duration in ms
-            once: false,
-        });
-
-    }, 8500);
+AOS.init({
+    duration: 1000,
+    once: false,
 });
-
 document.addEventListener("DOMContentLoaded", function () {
 
     let currentLang = 'en';
@@ -81,41 +71,43 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    const countersSection = document.getElementById("honeyCounters");
 
-    var certificateModal = document.getElementById('certificateModal');
-    var modalImg = document.getElementById('modalImage');
-    var zoomInBtn = document.getElementById('zoom-in');
-    var zoomOutBtn = document.getElementById('zoom-out');
+    if (countersSection) {
+        const counters = countersSection.querySelectorAll(".number");
 
-    let scale = 1;
-    const maxZoom = 3;
-    const minZoom = 1;
-    const zoomStep = 0.2;
+        const startCounters = () => {
+            counters.forEach(counter => {
+                counter.innerText = "0";
+                const target = +counter.dataset.target;
+                const speed = 400;
 
-    certificateModal.addEventListener('show.bs.modal', function (event) {
-        var triggerImg = event.relatedTarget;
-        var imgSrc = triggerImg.getAttribute('data-bs-img');
+                const updateCount = () => {
+                    const current = +counter.innerText;
+                    const increment = Math.ceil(target / speed);
 
-        modalImg.src = imgSrc;
-        scale = 1;
-        modalImg.style.transform = `scale(${scale})`;
-    });
+                    if (current < target) {
+                        counter.innerText = current + increment;
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
 
-    zoomInBtn.addEventListener('click', function () {
-        if (scale < maxZoom) {
-            scale += zoomStep;
-            modalImg.style.transform = `scale(${scale})`;
-        }
-    });
-    zoomOutBtn.addEventListener('click', function () {
-        if (scale > minZoom) {
-            scale -= zoomStep;
-            modalImg.style.transform = `scale(${scale})`;
-        }
-    });
+                updateCount();
+            });
+        };
 
-    certificateModal.addEventListener('hidden.bs.modal', function () {
-        scale = 1;
-        modalImg.style.transform = `scale(${scale})`;
-    });
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startCounters();
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(countersSection);
+    }
+
+
 });

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,16 +18,6 @@
 </head>
 
 <body>
-    <div id="loader-overlay">
-        <div class="loader">
-            <video autoplay muted loop>
-                <source src="assets/loader.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <span class="shape"></span>
-        </div>
-    </div>
-
 
     <section class="hero">
         <div class="hero-video-wrapper">
@@ -43,16 +35,18 @@
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
+                   <i class="fas fa-bars"></i>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto gap-3 text-center">
-                        <li class="nav-item"><a class="nav-link" href="#" data-key="HomeLink">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about" data-key="AboutUs">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" data-key="Products">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html" data-key="HomeLink">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about-us.html" data-key="AboutUs">About Us</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="products.html" data-key="Products">Products</a>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="#" data-key="Partners">Partners</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" data-key="News">News</a></li>
+                        <li class="nav-item"><a class="nav-link" href="news.html" data-key="News">News</a></li>
                         <li class="nav-item"><a class="nav-link" href="#" data-key="ContactUs">Contact Us</a></li>
                     </ul>
                     <div class="dropdown p-4 p-lg-0 d-flex justify-content-center align-items-center">
@@ -67,9 +61,6 @@
                             <li><a class="dropdown-item" href="#" data-lang="fr">French</a></li>
                         </ul>
                     </div>
-
-
-
                 </div>
             </div>
         </nav>
@@ -87,12 +78,12 @@
                 Taste the sweetness of nature with our farm-fresh, premium honey.
             </p>
             <div class="hero-btns">
-                <a href="#" class="btn primary">
+                <a href="about-us.html" class="btn primary">
                     <span data-key="btnPrimary">Explore More</span>
                     <span class="arrow-circle"><i class="fas fa-arrow-right"></i></span>
                 </a>
 
-                <a href="#" class="btn secondary">
+                <a href="products.html" class="btn secondary">
                     <span data-key="btnSecondary">Explore Products</span>
                     <span class="arrow-circle"><i class="fas fa-arrow-right"></i></span>
                 </a>
@@ -100,7 +91,7 @@
 
         </div>
     </section>
-    <section class="py-5 about-brief">
+    <section class="py-5 about-brief" id="brief">
         <div class="container py-5">
             <div class="wrapper">
                 <div class="bee">
@@ -151,64 +142,107 @@
             </div>
         </div>
     </section>
-    <section class="about-honey py-5" id="about">
-        <div class="container py-5">
-            <div class="row align-items-center g-4 justify-content-center">
-                <div class="col-lg-6 position-relative" data-aos="fade-up">
-                    <div class="about-img-wrapper">
-                        <img src="assets/about-1.jpg" class="img-fluid main-img" alt="Beekeeper">
+    <section class="home-products">
+        <div class="product-showcase">
+            <div class="product-slide active" style="background-image: url('assets/product-1.avif');">
+                <div class="product-overlay">
+                </div>
+            </div>
 
-                        <div class="video-box">
-                            <img src="assets/about-2.jpg" alt="Honey Bee">
+            <div class="product-slide" style="background-image: url('assets/products-2.webp');">
+                <div class="product-overlay">
+                </div>
+            </div>
+
+            <div class="product-slide" style="background-image: url('assets/products-3.webp');">
+                <div class="product-overlay">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="map pt-5" data-aos="fade-up">
+        <div class="container-fluid px-0 pt-5">
+            <div class="heading">
+                <div class="container py-4">
+                    <h2 class="text-center mb-2">Our Branch Locations</h2>
+                </div>
+            </div>
+            <div class="map-wrapper">
+                <div id="map"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="certificates-section py-5">
+        <img src="assets/cert-bee.png" class="cert-bee" alt="bee">
+        <img src="assets/jar.png" class="cert-jar" alt="jar">
+        <div class="container">
+            <h2 class="text-center mb-5 py-5" data-aos="fade-up">Our Certificates</h2>
+            <div class="row g-4 py-5">
+                <div class="col-md-6 col-lg-4 col-xl-2" data-aos="fade-up">
+                    <div class="image">
+                        <img src="assets/certificate-icon-1.png" class="img-fluid  certificate-img" alt="Certificate 1"
+                            data-bs-toggle="modal" data-bs-target="#certificateModal"
+                            data-bs-img="assets/certificate-1.jpg">
+                        <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
+                            data-bs-img="assets/certificate-1.jpg">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6" data-aos="fade-up">
-                    <div class="about-content">
-                        <span class="about-subtitle" data-key="aboutSubtitle">About Us</span>
-                        <h2 class="about-title" data-key="aboutTitle">
-                            Sweet <span>Honey Packs</span> Fresh <br> Raw and Honey
-                        </h2>
-
-                        <p class="about-desc text-muted" data-key="aboutDesc">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quis minima architecto
-                            amet, autem itaque sapiente fugit asperiores eius qui nesciunt voluptates. Libero
-                            perferendis,
-                            quibusdam molestias laudantium voluptas impedit reprehenderit?
-                        </p>
-
-                        <div class="row mt-4 align-items-center">
-                            <div class="col-md-4">
-                                <div class="experience-box">
-                                    <h3>25+</h3>
-                                    <p class="text-muted" data-key="yearsExperience">Years of Experience</p>
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <ul class="about-features d-flex flex-column gap-3 mt-4 mt-lg-0">
-                                    <li class="pure">
-                                        <div class="img">
-                                            <img src="assets/pure.png" alt="pure">
-                                        </div>
-                                        <div>
-                                            <h4 data-key="firstFeatureTitle">Pure Honey</h4>
-                                            <span class="text-muted" data-key="firstFeatureDesc">Collected naturally by
-                                                honey bees.</span>
-                                        </div>
-                                    </li>
-                                    <li class="award">
-                                        <div class="img">
-                                            <img src="assets/award-1.png" alt="award">
-                                        </div>
-                                        <div>
-                                            <h4 data-key="secondFeatureTitle">100% Natural</h4>
-                                            <span class="text-muted" data-key="secondFeatureDesc">No additives, no
-                                                preservatives.</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-
+                <div class="col-md-6 col-lg-4 col-xl-2" data-aos="fade-up">
+                    <div class="image">
+                        <img src="assets/certificate-icon-2.png" class="img-fluid certificate-img" alt="Certificate 2"
+                            data-bs-toggle="modal" data-bs-target="#certificateModal"
+                            data-bs-img="assets/certificate-2.jpg">
+                        <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
+                            data-bs-img="assets/certificate-2.jpg">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-2" data-aos="fade-up">
+                    <div class="image">
+                        <img src="assets/certificate-icon-3.png" class="img-fluid certificate-img" alt="Certificate 3"
+                            data-bs-toggle="modal" data-bs-target="#certificateModal"
+                            data-bs-img="assets/certificate-3.jpg">
+                        <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
+                            data-bs-img="assets/certificate-3.jpg">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-2" data-aos="fade-up">
+                    <div class="image">
+                        <img src="assets/certificate-icon-1.png" class="img-fluid certificate-img" alt="Certificate 4"
+                            data-bs-toggle="modal" data-bs-target="#certificateModal"
+                            data-bs-img="assets/certificate-4.jpg">
+                        <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
+                            data-bs-img="assets/certificate-4.jpg">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-2" data-aos="fade-up">
+                    <div class="image">
+                        <img src="assets/certificate-icon-2.png" class="img-fluid certificate-img" alt="Certificate 5"
+                            data-bs-toggle="modal" data-bs-target="#certificateModal"
+                            data-bs-img="assets/certificate-5.jpg">
+                        <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
+                            data-bs-img="assets/certificate-5.jpg">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-2" data-aos="fade-up">
+                    <div class="image">
+                        <img src="assets/certificate-icon-3.png" class="img-fluid certificate-img" alt="Certificate 3"
+                            data-bs-toggle="modal" data-bs-target="#certificateModal"
+                            data-bs-img="assets/certificate-3.jpg">
+                        <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
+                            data-bs-img="assets/certificate-3.jpg">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
                         </div>
                     </div>
                 </div>
@@ -217,7 +251,7 @@
         </div>
     </section>
 
-    <section class="py-5 categories">
+    <section class="py-5 counters" id="honeyCounters">
         <div class="bee-shape">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="57" height="46"
                 viewBox="0 0 57 46">
@@ -243,39 +277,37 @@
             </svg>
         </div>
         <div class="container py-5">
-            <div class="heading">
-                <h2 data-key="categoriesTitle" data-aos="fade-up">Explore Our Categories</h2>
-            </div>
             <div class="row g-4 pt-3 mt-3">
-                <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                    <a href="best-hive.html" class="category-box">
-                        <img src="assets/category-1.jpg" alt="Best Hive">
-                        <div class="overlay"></div>
-                        <div class="content">
-                            <span>Explore</span>
-                            <h3>Best Hive</h3>
-                        </div>
-                    </a>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up">
+                    <div class="counter-box text-center">
+                        <div class="icon"><i class="fas fa-bottle-water"></i></div>
+                        <div class="number" data-target="120">0</div>
+                        <div class="title">Honey Products</div>
+                    </div>
                 </div>
-                <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                    <a href="shop.html" class="category-box">
-                        <img src="assets/category-2.jpg" alt="Best Sellers">
-                        <div class="overlay"></div>
-                        <div class="content">
-                            <span>Explore</span>
-                            <h3>Best Sellers!</h3>
-                        </div>
-                    </a>
+
+                <div class="col-md-6 col-lg-3" data-aos="fade-up">
+                    <div class="counter-box text-center">
+                        <div class="icon"><i class="fas fa-users"></i></div>
+                        <div class="number" data-target="85">0</div>
+                        <div class="title">Employees</div>
+                    </div>
                 </div>
-                <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                    <a href="learn.html" class="category-box">
-                        <img src="assets/category-3.jpg" alt="Keep Bees">
-                        <div class="overlay"></div>
-                        <div class="content">
-                            <span>Explore</span>
-                            <h3>Keep Bees</h3>
-                        </div>
-                    </a>
+
+                <div class="col-md-6 col-lg-3" data-aos="fade-up">
+                    <div class="counter-box text-center">
+                        <div class="icon"><i class="fas fa-cart-shopping"></i></div>
+                        <div class="number" data-target="5000">0</div>
+                        <div class="title">Honey Sales</div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3" data-aos="fade-up">
+                    <div class="counter-box text-center">
+                        <div class="icon"><i class="fas fa-globe"></i></div>
+                        <div class="number" data-target="5">0</div>
+                        <div class="title">Countries Exported</div>
+                    </div>
                 </div>
 
             </div>
@@ -294,235 +326,6 @@
             </div>
             <div class="honeypot__shadow"></div>
         </div>
-    </section>
-
-
-    <section class="certificates-section py-5">
-        <img src="assets/cert-bee.png" class="cert-bee" alt="bee">
-        <img src="assets/jar.png" class="cert-jar" alt="jar">
-        <div class="container">
-            <h2 class="text-center mb-5 py-5" data-aos="fade-up">Our Certificates</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                    <div class="image">
-                        <img src="assets/certificate-1.jpg" class="img-fluid rounded shadow-sm certificate-img"
-                            alt="Certificate 1" data-bs-toggle="modal" data-bs-target="#certificateModal"
-                            data-bs-img="assets/certificate-1.jpg">
-                        <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
-                            data-bs-img="assets/certificate-1.jpg">
-                            <i class="fa-solid fa-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                    <div class="image">
-                        <img src="assets/certificate-2.jpg" class="img-fluid rounded shadow-sm certificate-img"
-                            alt="Certificate 2" data-bs-toggle="modal" data-bs-target="#certificateModal"
-                            data-bs-img="assets/certificate-2.jpg">
-                        <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
-                            data-bs-img="assets/certificate-2.jpg">
-                            <i class="fa-solid fa-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                    <div class="image">
-                        <img src="assets/certificate-3.jpg" class="img-fluid rounded shadow-sm certificate-img"
-                            alt="Certificate 3" data-bs-toggle="modal" data-bs-target="#certificateModal"
-                            data-bs-img="assets/certificate-3.jpg">
-                        <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
-                            data-bs-img="assets/certificate-3.jpg">
-                            <i class="fa-solid fa-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                    <div class="image">
-                        <img src="assets/certificate-4.jpg" class="img-fluid rounded shadow-sm certificate-img"
-                            alt="Certificate 4" data-bs-toggle="modal" data-bs-target="#certificateModal"
-                            data-bs-img="assets/certificate-4.jpg">
-                        <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
-                            data-bs-img="assets/certificate-4.jpg">
-                            <i class="fa-solid fa-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                    <div class="image">
-                        <img src="assets/certificate-5.jpg" class="img-fluid rounded shadow-sm certificate-img"
-                            alt="Certificate 5" data-bs-toggle="modal" data-bs-target="#certificateModal"
-                            data-bs-img="assets/certificate-5.jpg">
-                        <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
-                            data-bs-img="assets/certificate-5.jpg">
-                            <i class="fa-solid fa-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <section class="blogs-news py-5">
-        <div class="container py-5">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="section-title">Latest Blogs & News</h2>
-                <p class="section-subtitle text-muted">Stay updated with our latest insights and stories</p>
-            </div>
-            <ul class="nav nav-tabs justify-content-center mb-4" id="blogsNewsTab" role="tablist" data-aos="fade-up">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="blogs-tab" data-bs-toggle="tab" data-bs-target="#blogs"
-                        type="button" role="tab" aria-controls="blogs" aria-selected="true">Blogs</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="news-tab" data-bs-toggle="tab" data-bs-target="#news" type="button"
-                        role="tab" aria-controls="news" aria-selected="false">News</button>
-                </li>
-            </ul>
-            <div class="tab-content" id="blogsNewsTabContent">
-                <div class="tab-pane fade show active" id="blogs" role="tabpanel" aria-labelledby="blogs-tab">
-                    <div class="row g-4" data-aos="fade-up">
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card h-100">
-                                <div class="img">
-                                    <img src="assets/blog-1.jpg" class="card-img-top" alt="Blog 2">
-                                </div>
-                                <div class="card-body">
-                                    <div class="date d-flex gap-2 align-items-center mb-3">
-                                        <i class="fas fa-calendar-alt"></i> <span>May 21, 2025</span>
-                                    </div>
-                                    <h3 class="card-title mb-3"><a href="">This season, increased yield of honey</a>
-                                    </h3>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                                        voluptate ea debitis aliquid voluptatem voluptates et quasi consectetur. Ut
-                                        possimus fuga ad culpa doloremque eaque placeat voluptates. Quod, voluptatum
-                                        nam!</p>
-                                    <div class="blog-footer">
-                                        <a href="#" class="blog-link d-flex align-items-center gap-2"> <span>Read
-                                                More</span> <i class="fas fa-arrow-right mt-1"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card h-100">
-                                <div class="img">
-                                    <img src="assets/blog-2.jpg" class="card-img-top" alt="Blog 2">
-                                </div>
-                                <div class="card-body">
-                                    <div class="date d-flex gap-2 align-items-center mb-3">
-                                        <i class="fas fa-calendar-alt"></i> <span> February 21, 2025</span>
-                                    </div>
-                                    <h3 class="card-title mb-3"><a href="">Our beekeepers begin to collect honey</a>
-                                    </h3>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                                        voluptate ea debitis aliquid voluptatem voluptates et quasi consectetur. Ut
-                                        possimus fuga ad culpa doloremque eaque placeat voluptates. Quod, voluptatum
-                                        nam!</p>
-                                    <div class="blog-footer">
-                                        <a href="#" class="blog-link d-flex align-items-center gap-2"> <span>Read
-                                                More</span> <i class="fas fa-arrow-right mt-1"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card h-100">
-                                <div class="img">
-                                    <img src="assets/blog-3.jpg" class="card-img-top" alt="Blog 2">
-                                </div>
-                                <div class="card-body">
-                                    <div class="date d-flex gap-2 align-items-center mb-3">
-                                        <i class="fas fa-calendar-alt"></i> <span> October 26, 2017</span>
-                                    </div>
-                                    <h3 class="card-title mb-3"><a href="">Definition of the honey naturalness</a>
-                                    </h3>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                                        voluptate ea debitis aliquid voluptatem voluptates et quasi consectetur. Ut
-                                        possimus fuga ad culpa doloremque eaque placeat voluptates. Quod, voluptatum
-                                        nam!</p>
-                                    <div class="blog-footer">
-                                        <a href="#" class="blog-link d-flex align-items-center gap-2"> <span>Read
-                                                More</span> <i class="fas fa-arrow-right mt-1"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="news" role="tabpanel" aria-labelledby="news-tab">
-                    <div class="row g-4" data-aos="fade-up">
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card h-100">
-                                <div class="img">
-                                    <img src="assets/blog-2.jpg" class="card-img-top" alt="Blog 2">
-                                </div>
-                                <div class="card-body">
-                                    <div class="date d-flex gap-2 align-items-center mb-3">
-                                        <i class="fas fa-calendar-alt"></i> <span> February 21, 2025</span>
-                                    </div>
-                                    <h3 class="card-title mb-3"><a href="">Our beekeepers begin to collect honey</a>
-                                    </h3>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                                        voluptate ea debitis aliquid voluptatem voluptates et quasi consectetur. Ut
-                                        possimus fuga ad culpa doloremque eaque placeat voluptates. Quod, voluptatum
-                                        nam!</p>
-                                    <div class="blog-footer">
-                                        <a href="#" class="blog-link d-flex align-items-center gap-2"> <span>Read
-                                                More</span> <i class="fas fa-arrow-right mt-1"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card h-100">
-                                <div class="img">
-                                    <img src="assets/blog-3.jpg" class="card-img-top" alt="Blog 2">
-                                </div>
-                                <div class="card-body">
-                                    <div class="date d-flex gap-2 align-items-center mb-3">
-                                        <i class="fas fa-calendar-alt"></i> <span> October 26, 2017</span>
-                                    </div>
-                                    <h3 class="card-title mb-3"><a href="">Definition of the honey naturalness</a>
-                                    </h3>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                                        voluptate ea debitis aliquid voluptatem voluptates et quasi consectetur. Ut
-                                        possimus fuga ad culpa doloremque eaque placeat voluptates. Quod, voluptatum
-                                        nam!</p>
-                                    <div class="blog-footer">
-                                        <a href="#" class="blog-link d-flex align-items-center gap-2"> <span>Read
-                                                More</span> <i class="fas fa-arrow-right mt-1"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card h-100">
-                                <div class="img">
-                                    <img src="assets/blog-1.jpg" class="card-img-top" alt="Blog 2">
-                                </div>
-                                <div class="card-body">
-                                    <div class="date d-flex gap-2 align-items-center mb-3">
-                                        <i class="fas fa-calendar-alt"></i> <span>May 21, 2025</span>
-                                    </div>
-                                    <h3 class="card-title mb-3"><a href="">This season, increased yield of honey</a>
-                                    </h3>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                                        voluptate ea debitis aliquid voluptatem voluptates et quasi consectetur. Ut
-                                        possimus fuga ad culpa doloremque eaque placeat voluptates. Quod, voluptatum
-                                        nam!</p>
-                                    <div class="blog-footer">
-                                        <a href="#" class="blog-link d-flex align-items-center gap-2"> <span>Read
-                                                More</span> <i class="fas fa-arrow-right mt-1"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <img src="assets/flower3d.png" class="flower" alt="flower">
-        <img src="assets/blog-3-bee.png" class="blog-bee" alt="blog">
     </section>
     <div class="modal fade" id="certificateModal" tabindex="-1">
         <div class="modal-dialog modal-lg">
@@ -549,11 +352,22 @@
             </div>
         </div>
     </div>
+    <div class="whatsapp-wrapper">
+        <span class="whatsapp-message">Need help?</span>
+
+        <a href="#" class="whatsapp-float" target="_blank"
+            aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/produtSlider.js"></script>
+    <script src="js/certificate.js"></script>
+    <script src="js/map.js"></script>
 </body>
 
 </html>

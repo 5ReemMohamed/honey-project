@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="hero-video-wrapper">
+            <img src="assets/honey-product-1.jpg" class="w-100 h-100 object-fit-cover" alt="">
+        </div>
+        <nav class="navbar navbar-expand-lg" id="mainNavbar">
+            <div class="container-lg ">
+                <a class="navbar-brand" href="index.html">
+                    <div class="logo-icon">
+                        <img src="assets/logo.png" height="70" class="w-100 dark-logo">
+                        <img src="assets/light-logo.png" height="70" class="w-100 light-logo">
+                    </div>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto gap-3 text-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html" data-key="HomeLink">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about" data-key="AboutUs">About Us</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="products.html" data-key="Products">Products</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#" data-key="Partners">Partners</a></li>
+                        <li class="nav-item"><a class="nav-link" href="news.html" data-key="News">News</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" data-key="ContactUs">Contact Us</a></li>
+                    </ul>
+                    <div class="dropdown p-4 p-lg-0 d-flex justify-content-center align-items-center">
+                        <button class="btn btn-warning dropdown-toggle" type="button" id="languageDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Language
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
+                            <li><a class="dropdown-item" href="#" data-lang="ar">Arabic</a></li>
+                            <li><a class="dropdown-item" href="#" data-lang="es">Spanish</a></li>
+                            <li><a class="dropdown-item" href="#" data-lang="fr">French</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="hero-inner pt-5" data-aos="fade-up">
+            <h1 class="hero-title">
+                Crafting Pure Natural Products
+            </h1>
+            <p class="hero-desc d-flex gap-2 align-items-center about-hero-desc">
+                For over a decade, we’ve been dedicated to producing high-quality honey,
+                natural juices, and supplements that promote health and wellness
+            </p>
+            <div class="hero-btns">
+                <a href="products.html" class="btn primary">
+                    <span>Explore More</span>
+                    <span class="arrow-circle"><i class="fas fa-arrow-right"></i></span>
+                </a>
+
+                <a href="#" class="btn secondary">
+                    <span>Contact Us</span>
+                    <span class="arrow-circle"><i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="about-honey py-5" id="about">
+        <div class="container py-5">
+            <div class="row align-items-center g-4 justify-content-center">
+                <div class="col-lg-6 position-relative" data-aos="fade-up">
+                    <div class="about-img-wrapper">
+                        <img src="assets/about-1.jpg" class="img-fluid main-img" alt="Beekeeper">
+
+                        <div class="video-box">
+                            <img src="assets/about-2.jpg" alt="Honey Bee">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="about-content">
+                        <span class="about-subtitle" data-key="aboutSubtitle">About Us</span>
+                        <h2 class="about-title" data-key="aboutTitle">
+                            Sweet <span>Honey Packs</span> Fresh <br> Raw and Honey
+                        </h2>
+
+                        <p class="about-desc text-muted" data-key="aboutDesc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quis minima architecto
+                            amet, autem itaque sapiente fugit asperiores eius qui nesciunt voluptates. Libero
+                            perferendis,
+                            quibusdam molestias laudantium voluptas impedit reprehenderit?
+                        </p>
+
+                        <div class="row mt-4 align-items-center">
+                            <div class="col-md-4">
+                                <div class="experience-box">
+                                    <h3>18+</h3>
+                                    <p class="text-muted" data-key="yearsExperience">Years of Experience</p>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <ul class="about-features d-flex flex-column gap-3 mt-4 mt-lg-0">
+                                    <li class="pure">
+                                        <div class="img">
+                                            <img src="assets/pure.png" alt="pure">
+                                        </div>
+                                        <div>
+                                            <h3 data-key="firstFeatureTitle">Pure Honey</h3>
+                                            <span class="text-muted" data-key="firstFeatureDesc">Collected naturally by
+                                                honey bees.</span>
+                                        </div>
+                                    </li>
+                                    <li class="award">
+                                        <div class="img">
+                                            <img src="assets/award-1.png" alt="award">
+                                        </div>
+                                        <div>
+                                            <h3 data-key="secondFeatureTitle">100% Natural</h3>
+                                            <span class="text-muted" data-key="secondFeatureDesc">No additives, no
+                                                preservatives.</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <div class="whatsapp-wrapper">
+        <span class="whatsapp-message">Need help?</span>
+
+        <a href="#" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
