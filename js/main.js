@@ -17,19 +17,41 @@ document.addEventListener("DOMContentLoaded", function () {
                 temp.innerHTML = translation;
                 el.innerHTML = temp.innerHTML;
             };
+
             const translatePage = (lang) => {
                 document.querySelectorAll('[data-key]').forEach(el => translateElement(el, lang));
                 document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+                const langButton = document.getElementById('languageDropdown');
+                if (langButton) {
+                    const langNames = {
+                        'en': 'English',
+                        'ar': 'العربية',
+                        'es': 'Español',
+                        'fr': 'Français'
+                    };
+                    langButton.textContent = langNames[lang] || 'Language';
+                }
             };
+
             translatePage(currentLang);
 
-            document.querySelectorAll('.dropdown-item').forEach(item => {
+            document.querySelectorAll('#languageDropdown ~ .dropdown-menu .dropdown-item').forEach(item => {
                 item.addEventListener('click', (e) => {
                     e.preventDefault();
+                    e.stopPropagation();
+
                     const lang = item.getAttribute('data-lang');
                     currentLang = lang;
-                    document.getElementById('languageDropdown').textContent = item.textContent.toUpperCase();
+                    const dropdown = item.closest('.dropdown-menu');
+                    if (dropdown) {
+                        const dropdownInstance = bootstrap.Dropdown.getInstance(dropdown.previousElementSibling);
+                        if (dropdownInstance) {
+                            dropdownInstance.hide();
+                        }
+                    }
+
                     translatePage(lang);
+                    localStorage.setItem('preferredLanguage', lang);
                 });
             });
         })
