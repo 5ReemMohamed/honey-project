@@ -1,111 +1,110 @@
-const form = document.getElementById("contactForm");
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contactForm");
+    if (!form) return;
 
-const fields = {
-    name: {
-        input: document.getElementById("name"),
-        regex: /^[a-zA-Z\s]{3,}$/,
-        message: "Name must be at least 3 letters"
-    },
-    phone: {
-        input: document.getElementById("phone"),
-        regex: /^[0-9+\s]{8,}$/,
-        message: "Enter a valid phone number"
-    },
-    email: {
-        input: document.getElementById("email"),
-        regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-        message: "Enter a valid email address"
-    },
-    subject: {
-        input: document.getElementById("subject"),
-        regex: /^.{3,}$/,
-        message: "Subject must be at least 3 characters"
-    },
-    message: {
-        input: document.getElementById("message"),
-        regex: /^.{10,}$/,
-        message: "Message must be at least 10 characters"
+    const inputs = form.querySelectorAll("input, textarea");
+    function showError(input, type) {
+        const error = input.nextElementSibling;
+        input.classList.add("error");
+
+        const key = type === "required"
+            ? `data-required-${window.currentLang}`
+            : `data-error-${window.currentLang}`;
+
+        error.innerText = input.getAttribute(key) || "Invalid";
+        error.style.display = "block";
     }
-};
 
-function showError(input, msg) {
-    const error = input.nextElementSibling;
-    input.classList.add("error");
-    error.innerText = msg;
-    error.style.display = "block";
-}
+    function clearError(input) {
+        const error = input.nextElementSibling;
+        input.classList.remove("error");
+        error.innerText = "";
+        error.style.display = "none";
+    }
 
-function clearError(input) {
-    const error = input.nextElementSibling;
-    input.classList.remove("error");
-    error.innerText = "";
-    error.style.display = "none";
-}
-
-Object.values(fields).forEach(field => {
-    field.input.addEventListener("input", () => {
-        if (field.input.value.trim() === "") {
-            showError(field.input, "This field is required");
-        } else if (!field.regex.test(field.input.value.trim())) {
-            showError(field.input, field.message);
-        } else {
-            clearError(field.input);
-        }
-    });
-});
-
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    let isValid = true;
-
-    Object.values(fields).forEach(field => {
-        const value = field.input.value.trim();
-
-        if (value === "") {
-            showError(field.input, "This field is required");
-            isValid = false;
-        } else if (!field.regex.test(value)) {
-            showError(field.input, field.message);
-            isValid = false;
-        }
+    inputs.forEach(input => {
+        input.addEventListener("input", () => {
+            if (input.value.trim() === "") {
+                showError(input, "required");
+            } else if (input.dataset.regex) {
+                const regex = new RegExp(input.dataset.regex);
+                if (!regex.test(input.value.trim())) {
+                    showError(input, "error");
+                } else {
+                    clearError(input);
+                }
+            } else {
+                clearError(input);
+            }
+        });
     });
 
-    if (isValid) {
-        Swal.fire({
-            icon: "success",
-            title: "Message Sent!",
-            text: "Your message has been sent successfully.",
-            confirmButtonColor: "#c89b3c"
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+        let isValid = true;
+
+        inputs.forEach(input => {
+            if (input.value.trim() === "") {
+                showError(input, "required");
+                isValid = false;
+            } else if (input.dataset.regex) {
+                const regex = new RegExp(input.dataset.regex);
+                if (!regex.test(input.value.trim())) {
+                    showError(input, "error");
+                    isValid = false;
+                }
+            }
         });
 
-        form.reset();
-        Object.values(fields).forEach(field => clearError(field.input));
-    }
-});
-   const section = document.querySelector(".contact");
-        const bees = document.querySelectorAll(
-            ".contact-bee-shape, .contact-bee-shape-2"
-        );
+        if (isValid) {
+            const title = document.body.getAttribute(`data-success-title-${window.currentLang}`);
+            const text = document.body.getAttribute(`data-success-text-${window.currentLang}`);
 
-        function moveBee(bee) {
-            const sectionWidth = section.clientWidth;
-            const sectionHeight = section.clientHeight;
-            const beeWidth = bee.offsetWidth;
-            const beeHeight = bee.offsetHeight;
+            Swal.fire({
+                icon: "success",
+                title: title,
+                text: text,
+                confirmButtonColor: "#c89b3c"
+            });
 
-            const maxX = sectionWidth - beeWidth;
-            const maxY = sectionHeight - beeHeight;
-
-            const randomX = Math.random() * maxX;
-            const randomY = Math.random() * maxY;
-            const randomRotate = Math.random() * 40 - 20;
-
-            bee.style.left = `${randomX}px`;
-            bee.style.top = `${randomY}px`;
-            bee.style.transform = `rotate(${randomRotate}deg)`;
+            form.reset();
+            inputs.forEach(clearError);
         }
+    });
 
-        bees.forEach((bee, index) => {
-            moveBee(bee);
-            setInterval(() => moveBee(bee), 4000 + index * 1500);
+    document.addEventListener("languageChanged", (e) => {
+        window.currentLang = e.detail.lang;
+        inputs.forEach(input => {
+            if (input.classList.contains("error")) {
+                const type = input.value.trim() === "" ? "required" : "error";
+                showError(input, type);
+            }
         });
+    });
+
+    const section = document.querySelector(".contact");
+    const bees = document.querySelectorAll(".contact-bee-shape, .contact-bee-shape-2");
+
+    function moveBee(bee) {
+        const sectionWidth = section.clientWidth;
+        const sectionHeight = section.clientHeight;
+        const beeWidth = bee.offsetWidth;
+        const beeHeight = bee.offsetHeight;
+
+        const maxX = sectionWidth - beeWidth;
+        const maxY = sectionHeight - beeHeight;
+
+        const randomX = Math.random() * maxX;
+        const randomY = Math.random() * maxY;
+        const randomRotate = Math.random() * 40 - 20;
+
+        bee.style.left = `${randomX}px`;
+        bee.style.top = `${randomY}px`;
+        bee.style.transform = `rotate(${randomRotate}deg)`;
+    }
+
+    bees.forEach((bee, index) => {
+        moveBee(bee);
+        setInterval(() => moveBee(bee), 4000 + index * 1500);
+    });
+});

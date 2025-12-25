@@ -40,52 +40,47 @@
 
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto gap-3 text-center">
-                        <li class="nav-item"><a class="nav-link" href="index.html" data-key="HomeLink">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about-us.html" data-key="AboutUs">About Us</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html" data-en="Home" data-ar="الرئيسية" data-es="Inicio"
+                                data-fr="Accueil">
+                                Home
+                            </a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                        <li class="nav-item">
+                            <a class="nav-link" href="about-us.html" data-en="About Us" data-ar="من نحن"
+                                data-es="Sobre Nosotros" data-fr="À propos">
+                                About Us
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="categories.html" data-en="Products" data-ar="المنتجات"
+                                data-es="Productos" data-fr="Produits">
                                 Products
                             </a>
-
-                            <ul class="dropdown-menu products-dropdown" aria-labelledby="productsDropdown">
-
-                                <li>
-                                    <a href="products.html" class="dropdown-item product-link">
-                                        <i class="fa-solid fa-jar"></i>
-                                        <div>
-                                            <h6>Honey Products</h6>
-                                            <p>crafted to nourish your body</p>
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="products.html" class="dropdown-item product-link">
-                                        <i class="fa-solid fa-spoon"></i>
-                                        <div>
-                                            <h6>Creamed Honey</h6>
-                                            <p>smooth & creamy honey</p>
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="products.html" class="dropdown-item product-link">
-                                        <i class="fa-solid fa-mug-hot"></i>
-                                        <div>
-                                            <h6>Drinks</h6>
-                                            <p>infused with honey goodness</p>
-                                        </div>
-                                    </a>
-                                </li>
-
-                            </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#" data-key="Partners">Partners</a></li>
-                        <li class="nav-item"><a class="nav-link" href="news.html" data-key="News">News</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact-us.html" data-key="ContactUs">Contact Us</a></li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-en="Partners" data-ar="شركاؤنا" data-es="Socios"
+                                data-fr="Partenaires">
+                                Partners
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html" data-en="News" data-ar="الأخبار" data-es="Noticias"
+                                data-fr="Actualités">
+                                News
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact-us.html" data-en="Contact Us" data-ar="تواصل معنا"
+                                data-es="Contáctanos" data-fr="Contactez-nous">
+                                Contact Us
+                            </a>
+                        </li>
+
                     </ul>
                     <div class="dropdown p-4 p-lg-0 d-flex justify-content-center align-items-center">
                         <button class="btn btn-warning dropdown-toggle" type="button" id="languageDropdown"
@@ -105,26 +100,46 @@
         <div class="hero-inner py-5" data-aos="fade-up">
             <div class="bee-header">
                 <img src="assets/bee.png" alt="bee" class="bee-img">
-                <span data-key="beeText">Honey bees collect nectar</span>
+                <span data-en="Honey bees collect nectar" data-ar="نحل العسل يجمع الرحيق"
+                    data-es="Las abejas melíferas recolectan néctar"
+                    data-fr="Les abeilles mellifères collectent le nectar">
+                    Honey bees collect nectar
+                </span>
+
             </div>
 
-            <h1 class="hero-title" data-key="heroTitle">
+            <h1 class="hero-title" data-en='the best quality <span>Honey from</span> our farm'
+                data-ar='أفضل جودة <span>عسل من</span> مزرعتنا'
+                data-es='La mejor calidad de <span>miel de</span> nuestra granja'
+                data-fr='La meilleure qualité de <span>miel de</span> notre ferme'>
                 the best quality <span>Honey from</span> our farm
             </h1>
 
-            <p class="hero-desc" data-key="heroDesc">
+            <p class="hero-desc" data-en="Taste the sweetness of nature with our farm-fresh, premium honey."
+                data-ar="تذوق حلاوة الطبيعة مع عسلنا الطازج الفاخر من المزرعة."
+                data-es="Prueba la dulzura de la naturaleza con nuestra miel fresca y premium."
+                data-fr="Savourez la douceur de la nature avec notre miel frais et premium.">
                 Taste the sweetness of nature with our farm-fresh, premium honey.
             </p>
+
             <div class="hero-btns">
                 <a href="about-us.html" class="btn primary">
-                    <span data-key="btnPrimary">Explore More</span>
-                    <span class="arrow-circle"><i class="fas fa-arrow-right"></i></span>
+                    <span data-en="Explore More" data-ar="اكتشف المزيد" data-es="Explorar más" data-fr="Explorer plus">
+                        Explore More
+                    </span>
+                    <span class="arrow-circle"><i class="fas fa-arrow-right"></i><i
+                            class="fas fa-arrow-left"></i></span>
                 </a>
 
                 <a href="products.html" class="btn secondary">
-                    <span data-key="btnSecondary">Explore Products</span>
-                    <span class="arrow-circle"><i class="fas fa-arrow-right"></i></span>
+                    <span data-en="Explore Products" data-ar="استعرض المنتجات" data-es="Explorar productos"
+                        data-fr="Explorer les produits">
+                        Explore Products
+                    </span>
+                    <span class="arrow-circle"><i class="fas fa-arrow-right"></i><i
+                            class="fas fa-arrow-left"></i></span>
                 </a>
+
             </div>
 
         </div>
@@ -156,20 +171,47 @@
             <div class="row g-4 justify-content-center align-items-center">
                 <div class="col-lg-6" data-aos="fade-up">
                     <div class="text p-3">
-                        <h2>Brief About Bee&Honey</h2>
-                        <p class="text-muted">Bee&Honey is a brand under Yemeni Honey House, founded in 2007, with
-                            extensive experience in producing and marketing natural honey to the highest quality
-                            standards.</p>
-                        <p class="text-muted">Bee&Honey was born from our passion for offering modern, natural products
-                            that meet the needs of today's consumer, providing a unique experience that blends flavor
-                            and benefits.</p>
-                        <p class="text-muted">We take great care in selecting our apiaries and use sustainable methods
-                            in our production that protect the environment and safeguard bees. Our products, whether raw
-                            honey or natural honey beverages, reflect our commitment to unmatched quality and true
-                            purity, free from any artificial additives.</p>
-                        <p class="text-muted">At Bee&Honey, we believe that honey is more than just food, it's a
-                            lifestyle that energizes you, strengthens immunity, and naturally supports the body's
-                            balance.</p>
+                        <h2 data-en="Brief About Bee&Honey" data-ar="نبذة عن النحل والعسل"
+                            data-es="Breve sobre Abejas y Miel" data-fr="Bref sur les Abeilles et le Miel">
+                            Brief About Bee&Honey
+                        </h2>
+                        <p class="text-muted"
+                            data-en="Bee&Honey is a brand under Yemeni Honey House, founded in 2007, with extensive experience in producing and marketing natural honey to the highest quality standards."
+                            data-ar="Bee&Honey هي علامة تجارية تابعة لـ Yemeni Honey House، تأسست عام 2007، ولديها خبرة واسعة في إنتاج وتسويق العسل الطبيعي بأعلى معايير الجودة."
+                            data-es="Bee&Honey es una marca de Yemeni Honey House, fundada en 2007, con amplia experiencia en la producción y comercialización de miel natural con los más altos estándares de calidad."
+                            data-fr="Bee&Honey est une marque de Yemeni Honey House, fondée en 2007, avec une vaste expérience dans la production et la commercialisation de miel naturel aux normes de qualité les plus élevées.">
+                            Bee&Honey is a brand under Yemeni Honey House, founded in 2007, with extensive experience in
+                            producing and marketing natural honey to the highest quality standards.
+                        </p>
+                        <p class="text-muted"
+                            data-en="Bee&Honey was born from our passion for offering modern, natural products that meet the needs of today's consumer, providing a unique experience that blends flavor and benefits."
+                            data-ar="تأسست Bee&Honey من شغفنا بتقديم منتجات طبيعية وعصرية تلبي احتياجات المستهلك اليوم، موفرة تجربة فريدة تمزج بين الطعم والفوائد."
+                            data-es="Bee&Honey nació de nuestra pasión por ofrecer productos modernos y naturales que satisfagan las necesidades del consumidor actual, proporcionando una experiencia única que combina sabor y beneficios."
+                            data-fr="Bee&Honey est née de notre passion pour offrir des produits modernes et naturels répondant aux besoins du consommateur d'aujourd'hui, offrant une expérience unique mêlant saveur et bienfaits.">
+                            Bee&Honey was born from our passion for offering modern, natural products that meet the
+                            needs of today's consumer, providing a unique experience that blends flavor and benefits.
+                        </p>
+
+                        <p class="text-muted"
+                            data-en="We take great care in selecting our apiaries and use sustainable methods in our production that protect the environment and safeguard bees. Our products, whether raw honey or natural honey beverages, reflect our commitment to unmatched quality and true purity, free from any artificial additives."
+                            data-ar="نولي اهتمامًا كبيرًا في اختيار مزارعنا ونستخدم طرقًا مستدامة في الإنتاج تحمي البيئة وتحافظ على النحل. منتجاتنا، سواء كانت عسلًا خامًا أو مشروبات عسل طبيعية، تعكس التزامنا بالجودة الفائقة والنقاء الحقيقي، خالية من أي إضافات صناعية."
+                            data-es="Cuidamos mucho la selección de nuestras colmenas y usamos métodos sostenibles en nuestra producción que protegen el medio ambiente y resguardan a las abejas. Nuestros productos, ya sea miel cruda o bebidas de miel natural, reflejan nuestro compromiso con una calidad inigualable y pureza verdadera, libres de aditivos artificiales."
+                            data-fr="Nous prenons grand soin dans la sélection de nos ruches et utilisons des méthodes durables dans notre production qui protègent l'environnement et préservent les abeilles. Nos produits, qu'il s'agisse de miel brut ou de boissons au miel naturel, reflètent notre engagement envers une qualité inégalée et une pureté réelle, sans aucun additif artificiel.">
+                            We take great care in selecting our apiaries and use sustainable methods in our production
+                            that protect the environment and safeguard bees. Our products, whether raw honey or natural
+                            honey beverages, reflect our commitment to unmatched quality and true purity, free from any
+                            artificial additives.
+                        </p>
+
+                        <p class="text-muted"
+                            data-en="At Bee&Honey, we believe that honey is more than just food, it's a lifestyle that energizes you, strengthens immunity, and naturally supports the body's balance."
+                            data-ar="في Bee&Honey، نؤمن أن العسل أكثر من مجرد طعام، إنه أسلوب حياة يمنحك الطاقة، يقوي المناعة، ويدعم توازن الجسم بشكل طبيعي."
+                            data-es="En Bee&Honey, creemos que la miel es más que un alimento, es un estilo de vida que te energiza, fortalece la inmunidad y apoya naturalmente el equilibrio del cuerpo."
+                            data-fr="Chez Bee&Honey, nous croyons que le miel est plus qu'un simple aliment, c'est un mode de vie qui vous énergise, renforce l'immunité et soutient naturellement l'équilibre du corps.">
+                            At Bee&Honey, we believe that honey is more than just food, it's a lifestyle that energizes
+                            you, strengthens immunity, and naturally supports the body's balance.
+                        </p>
+
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-up">
@@ -202,7 +244,11 @@
         <div class="container-fluid px-0 pt-5">
             <div class="heading">
                 <div class="container py-4">
-                    <h2 class="text-center mb-2">Our Branch Locations</h2>
+                    <h2 class="text-center mb-2" data-en="Our Branch Locations" data-ar="مواقع فروعنا"
+                        data-es="Nuestras ubicaciones de sucursales" data-fr="Nos emplacements de succursales">
+                        Our Branch Locations
+                    </h2>
+
                 </div>
             </div>
             <div class="map-wrapper">
@@ -216,7 +262,10 @@
         <img src="assets/cert-bee.png" class="cert-bee" alt="bee">
         <img src="assets/jar.png" class="cert-jar" alt="jar">
         <div class="container">
-            <h2 class="text-center mb-5 py-5" data-aos="fade-up">Our Certificates</h2>
+            <h2 class="text-center mb-5 py-5" data-aos="fade-up" data-en="Our Certificates" data-ar="شهاداتنا"
+                data-es="Nuestros certificados" data-fr="Nos certificats">
+                Our Certificates
+            </h2>
             <div class="row g-4 py-5">
                 <div class="col-md-6 col-lg-4 col-xl-2" data-aos="fade-up">
                     <div class="image">
@@ -320,7 +369,11 @@
                     <div class="counter-box text-center">
                         <div class="icon"><i class="fas fa-bottle-water"></i></div>
                         <div class="number" data-target="120">0</div>
-                        <div class="title">Honey Products</div>
+                        <div class="title" data-en="Honey Products" data-ar="منتجات العسل" data-es="Productos de miel"
+                            data-fr="Produits de miel">
+                            Honey Products
+                        </div>
+
                     </div>
                 </div>
 
@@ -328,7 +381,11 @@
                     <div class="counter-box text-center">
                         <div class="icon"><i class="fas fa-users"></i></div>
                         <div class="number" data-target="85">0</div>
-                        <div class="title">Employees</div>
+                        <div class="title" data-en="Employees" data-ar="الموظفين" data-es="Empleados"
+                            data-fr="Employés">
+                            Employees
+                        </div>
+
                     </div>
                 </div>
 
@@ -336,7 +393,11 @@
                     <div class="counter-box text-center">
                         <div class="icon"><i class="fas fa-cart-shopping"></i></div>
                         <div class="number" data-target="5000">0</div>
-                        <div class="title">Honey Sales</div>
+                        <div class="title" data-en="Honey Sales" data-ar="مبيعات العسل" data-es="Ventas de miel"
+                            data-fr="Ventes de miel">
+                            Honey Sales
+                        </div>
+
                     </div>
                 </div>
 
@@ -344,7 +405,11 @@
                     <div class="counter-box text-center">
                         <div class="icon"><i class="fas fa-globe"></i></div>
                         <div class="number" data-target="5">0</div>
-                        <div class="title">Countries Exported</div>
+                        <div class="title" data-en="Countries Exported" data-ar="الدول المصدرة إليها"
+                            data-es="Países exportados" data-fr="Pays exportés">
+                            Countries Exported
+                        </div>
+
                     </div>
                 </div>
 
@@ -365,11 +430,126 @@
             <div class="honeypot__shadow"></div>
         </div>
     </section>
+    <footer class="footer-section">
+        <img src="assets/footer-bee.png" class="footer-bee" alt="">
+        <div class="container py-5">
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-4 col-md-6 d-flex align-items-center">
+                    <div class="footer-logo">
+                        <img src="assets/logo.png" alt="Dropbe" height="100">
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title" data-en="Links" data-ar="روابط" data-es="Enlaces" data-fr="Liens">
+                        Links
+                    </h5>
+
+                    <ul class="footer-links">
+                        <li>
+                            <a href="index.html" data-en="Home" data-ar="الرئيسية" data-es="Inicio" data-fr="Accueil">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about-us.html" data-en="About Us" data-ar="من نحن" data-es="Sobre Nosotros"
+                                data-fr="À propos">
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="categories.html" data-en="Products" data-ar="المنتجات" data-es="Productos"
+                                data-fr="Produits">
+                                Products
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-en="Partner" data-ar="شركاؤنا" data-es="Socio" data-fr="Partenaire">
+                                Partner
+                            </a>
+                        </li>
+                        <li>
+                            <a href="news.html" data-en="News" data-ar="الأخبار" data-es="Noticias"
+                                data-fr="Actualités">
+                                News
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact-us.html" data-en="Contact Us" data-ar="تواصل معنا" data-es="Contáctanos"
+                                data-fr="Contactez-nous">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title" data-en="Products" data-ar="المنتجات" data-es="Productos"
+                        data-fr="Produits">
+                        Products
+                    </h5>
+
+                    <ul class="footer-links">
+                        <li>
+                            <a href="products.html" data-en="Honey Products" data-ar="منتجات العسل"
+                                data-es="Productos de miel" data-fr="Produits de miel">
+                                Honey Products
+                            </a>
+                        </li>
+                        <li>
+                            <a href="products.html" data-en="Creamed Honey" data-ar="العسل الكريمي"
+                                data-es="Miel cremado" data-fr="Miel crémeux">
+                                Creamed Honey
+                            </a>
+                        </li>
+                        <li>
+                            <a href="products.html" data-en="Drinks" data-ar="المشروبات" data-es="Bebidas"
+                                data-fr="Boissons">
+                                Drinks
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title" data-en="Newsletter" data-ar="النشرة الإخبارية" data-es="Boletín"
+                        data-fr="Newsletter">
+                        Newsletter
+                    </h5>
+
+                    <p class="footer-text"
+                        data-en="Sign Up For Our Email List To Receive Sweet Deals, Company News And More From Bee & Honey."
+                        data-ar="اشترك في قائمتنا البريدية لتصلك عروض حلوة، وأخبار الشركة والمزيد من Bee & Honey."
+                        data-es="Suscríbete a nuestra lista de correo para recibir ofertas dulces, noticias de la empresa y más de Bee & Honey."
+                        data-fr="Inscrivez-vous à notre liste de diffusion pour recevoir des offres spéciales, des nouvelles de l'entreprise et plus de Bee & Honey.">
+                        Sign Up For Our Email List To Receive Sweet Deals, Company News And More From Bee & Honey.
+                    </p>
+
+                    <form class="newsletter-form mt-4">
+                        <input type="email" placeholder="Email Address" data-placeholder-en="Email Address"
+                            data-placeholder-ar="البريد الإلكتروني" data-placeholder-es="Correo electrónico"
+                            data-placeholder-fr="Adresse e-mail" required>
+                        <button type="submit" data-en="Submit" data-ar="إرسال" data-es="Enviar" data-fr="Envoyer">
+                            Submit
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
     <div class="modal fade" id="certificateModal" tabindex="-1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Certificate</h5>
+                    <h5 class="modal-title" data-en="Certificate" data-ar="شهادة" data-es="Certificado"
+                        data-fr="Certificat">
+                        Certificate
+                    </h5>
+
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
@@ -391,7 +571,11 @@
         </div>
     </div>
     <div class="whatsapp-wrapper">
-        <span class="whatsapp-message">Need help?</span>
+        <span class="whatsapp-message" data-en="Need help?" data-ar="هل تحتاج مساعدة؟" data-es="Necesitas ayuda?"
+            data-fr="Besoin d'aide ?">
+            Need help?
+        </span>
+
 
         <a href="#" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
             <i class="fab fa-whatsapp"></i>
