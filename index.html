@@ -267,68 +267,46 @@
                 Our Certificates
             </h2>
             <div class="row g-4 py-5">
-                <div class="col-md-6 col-lg-4 col-xl-2" data-aos="fade-up">
+                <div class="col-md-6 col-lg-4 col-xl-3" data-aos="fade-up">
                     <div class="image">
-                        <img src="assets/certificate-icon-1.png" class="img-fluid  certificate-img" alt="Certificate 1"
+                        <img src="assets/certificate-icon-1.png" class="img-fluid certificate-img" alt="Certificate"
                             data-bs-toggle="modal" data-bs-target="#certificateModal"
-                            data-bs-img="assets/certificate-1.jpg">
+                            data-bs-imgs="assets/certificate-1.jpg,assets/certificate-3.jpg">
                         <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
-                            data-bs-img="assets/certificate-1.jpg">
+                            data-bs-imgs="assets/certificate-1.jpg,assets/certificate-3.jpg">
                             <i class="fa-solid fa-magnifying-glass-plus"></i>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 col-xl-2" data-aos="fade-up">
+                <div class="col-md-6 col-lg-4 col-xl-3" data-aos="fade-up">
                     <div class="image">
-                        <img src="assets/certificate-icon-2.png" class="img-fluid certificate-img" alt="Certificate 2"
+                        <img src="assets/certificate-icon-2.png" class="img-fluid certificate-img" alt="Certificate"
                             data-bs-toggle="modal" data-bs-target="#certificateModal"
+                            data-bs-imgs="assets/certificate-2.jpg">
+                        <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
                             data-bs-img="assets/certificate-2.jpg">
-                        <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
-                            data-bs-img="assets/certificate-2.jpg">
                             <i class="fa-solid fa-magnifying-glass-plus"></i>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 col-xl-2" data-aos="fade-up">
+                <div class="col-md-6 col-lg-4 col-xl-3" data-aos="fade-up">
                     <div class="image">
-                        <img src="assets/certificate-icon-3.png" class="img-fluid certificate-img" alt="Certificate 3"
+                        <img src="assets/certificate-icon-3.png" class="img-fluid certificate-img" alt="Certificate"
                             data-bs-toggle="modal" data-bs-target="#certificateModal"
-                            data-bs-img="assets/certificate-3.jpg">
+                            data-bs-imgs="assets/certificate-4.jpg">
                         <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
                             data-bs-img="assets/certificate-3.jpg">
                             <i class="fa-solid fa-magnifying-glass-plus"></i>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 col-xl-2" data-aos="fade-up">
+                <div class="col-md-6 col-lg-4 col-xl-3" data-aos="fade-up">
                     <div class="image">
-                        <img src="assets/certificate-icon-1.png" class="img-fluid certificate-img" alt="Certificate 4"
+                        <img src="assets/certificate-icon-4.png" class="img-fluid certificate-img" alt="Certificate"
                             data-bs-toggle="modal" data-bs-target="#certificateModal"
-                            data-bs-img="assets/certificate-4.jpg">
-                        <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
-                            data-bs-img="assets/certificate-4.jpg">
-                            <i class="fa-solid fa-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-2" data-aos="fade-up">
-                    <div class="image">
-                        <img src="assets/certificate-icon-2.png" class="img-fluid certificate-img" alt="Certificate 5"
-                            data-bs-toggle="modal" data-bs-target="#certificateModal"
-                            data-bs-img="assets/certificate-5.jpg">
+                            data-bs-imgs="assets/certificate-5.jpg">
                         <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
                             data-bs-img="assets/certificate-5.jpg">
-                            <i class="fa-solid fa-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-2" data-aos="fade-up">
-                    <div class="image">
-                        <img src="assets/certificate-icon-3.png" class="img-fluid certificate-img" alt="Certificate 3"
-                            data-bs-toggle="modal" data-bs-target="#certificateModal"
-                            data-bs-img="assets/certificate-3.jpg">
-                        <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
-                            data-bs-img="assets/certificate-3.jpg">
                             <i class="fa-solid fa-magnifying-glass-plus"></i>
                         </div>
                     </div>
@@ -549,12 +527,11 @@
                         data-fr="Certificat">
                         Certificate
                     </h5>
-
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     <div class="cert-viewer">
-                        <div class="cert-controls">
+                        <div class="cert-controls mb-2">
                             <button class="btn btn-sm btn-outline-primary" id="zoom-in">
                                 <i class="fas fa-search-plus"></i>
                             </button>
@@ -562,14 +539,14 @@
                                 <i class="fas fa-search-minus"></i>
                             </button>
                         </div>
-                        <div class="cert-image-container">
-                            <img id="modalImage" src="" alt="Certificate" class="cert-image">
+                        <div class="cert-image-container d-flex flex-column align-items-center gap-2">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="whatsapp-wrapper">
         <span class="whatsapp-message" data-en="Need help?" data-ar="هل تحتاج مساعدة؟" data-es="Necesitas ayuda?"
             data-fr="Besoin d'aide ?">
