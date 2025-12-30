@@ -85,21 +85,28 @@ document.addEventListener("DOMContentLoaded", function () {
     if (countersSection) {
         const counters = countersSection.querySelectorAll(".number");
 
+        // format numbers (K / M)
+        const formatNumber = (num) => {
+            if (num >= 1000000) return (num / 1000000) + "M+";
+            if (num >= 1000) return (num / 1000) + "K+";
+            return num;
+        };
+
         const startCounters = () => {
             counters.forEach(counter => {
-                counter.innerText = "0";
+                let current = 0;
                 const target = +counter.dataset.target;
                 const speed = 400;
+                const increment = Math.ceil(target / speed);
 
                 const updateCount = () => {
-                    const current = +counter.innerText;
-                    const increment = Math.ceil(target / speed);
+                    current += increment;
 
                     if (current < target) {
-                        counter.innerText = current + increment;
+                        counter.innerText = current.toLocaleString();
                         setTimeout(updateCount, 20);
                     } else {
-                        counter.innerText = target;
+                        counter.innerText = formatNumber(target);
                     }
                 };
 
@@ -111,11 +118,13 @@ document.addEventListener("DOMContentLoaded", function () {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     startCounters();
+                    observer.disconnect(); // prevent re-trigger
                 }
             });
         }, { threshold: 0.5 });
 
         observer.observe(countersSection);
     }
+
 
 });
