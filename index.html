@@ -20,12 +20,6 @@
 <body>
 
     <section class="hero">
-        <svg class="svg-2" xmlns="http://www.w3.org/2000/svg" width="1119" height="969" viewBox="0 0 1119 969"
-            fill="none">
-            <path
-                d="M559.319 0L635.295 379.946C661.112 509.055 728.681 626.087 827.584 713L1118.64 968.77L559.319 779.537L0 968.77L291.055 713C389.958 626.087 457.527 509.055 483.344 379.946L559.319 0Z"
-                fill="#FDB913"></path>
-        </svg>
         <div class="hero-video-wrapper">
             <video autoplay muted loop playsinline class="hero-video">
                 <source src="assets/header.mp4" type="video/mp4">
@@ -148,31 +142,10 @@
             </div>
 
         </div>
+        <div class="hero-shape"></div>
     </section>
     <section class="py-5 about-brief" id="brief">
         <div class="container py-5">
-            <div class="wrapper">
-                <div class="bee">
-                    <div class="bee-body">
-                        <div class="blink"></div>
-                        <div class="mouth"></div>
-                        <div class="antenae"></div>
-                        <div class="bee-left"></div>
-                        <div class="bee-right"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="wrapper">
-                <div class="bee2">
-                    <div class="bee-body">
-                        <div class="blink"></div>
-                        <div class="mouth"></div>
-                        <div class="antenae"></div>
-                        <div class="bee-left"></div>
-                        <div class="bee-right"></div>
-                    </div>
-                </div>
-            </div>
             <div class="row g-4 justify-content-center align-items-center">
                 <div class="col-lg-6" data-aos="fade-up">
                     <div class="text p-3">
@@ -245,10 +218,10 @@
             </div>
         </div>
     </section>
-    <section class="map pt-5" data-aos="zoom-in">
+    <section class="map-section py-5" data-aos="zoom-in">
         <div class="container-fluid px-0 pt-5">
             <div class="heading">
-                <div class="container py-4">
+                <div class="container pb-4">
                     <h2 class="text-center mb-2" data-en="Our Branch Locations" data-ar="مواقع فروعنا"
                         data-es="Nuestras ubicaciones de sucursales" data-fr="Nos emplacements de succursales">
                         Our Branch Locations
@@ -260,19 +233,24 @@
                 <div id="map"></div>
             </div>
         </div>
+
     </section>
 
 
     <section class="certificates-section py-5">
+        <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="-300 0 950 270">
+            <path d="M-314,267 C105,364 400,100 812,279" fill="none" stroke="white" stroke-width="120"
+                stroke-linecap="round" />
+        </svg>
         <img src="assets/cert-bee.png" class="cert-bee" alt="bee">
         <img src="assets/jar.png" class="cert-jar" alt="jar">
         <div class="container pb-5">
-            <h2 class="text-center mb-4 pt-5" data-aos="fade-up" data-en="Our Certificates" data-ar="شهاداتنا"
+            <h2 class="text-center mb-4 pt-5" data-aos="zoom-in" data-en="Our Certificates" data-ar="شهاداتنا"
                 data-es="Nuestros certificados" data-fr="Nos certificats">
                 Our Certificates
             </h2>
             <div class="row g-4 pb-5">
-                <div class="col-md-6 col-lg-4 col-xl-3" data-aos="fade-up">
+                <div class="col-md-6 col-lg-4 col-xl-3" data-aos="zoom-in">
                     <div class="image">
                         <img src="assets/certificate-icon-1.png" class="img-fluid certificate-img" alt="Certificate"
                             data-bs-toggle="modal" data-bs-target="#certificateModal"
@@ -283,7 +261,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 col-xl-3" data-aos="fade-up">
+                <div class="col-md-6 col-lg-4 col-xl-3" data-aos="zoom-in">
                     <div class="image">
                         <img src="assets/certificate-icon-2.png" class="img-fluid certificate-img" alt="Certificate"
                             data-bs-toggle="modal" data-bs-target="#certificateModal"
@@ -294,7 +272,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 col-xl-3" data-aos="fade-up">
+                <div class="col-md-6 col-lg-4 col-xl-3" data-aos="zoom-in">
                     <div class="image">
                         <img src="assets/certificate-icon-3.png" class="img-fluid certificate-img" alt="Certificate"
                             data-bs-toggle="modal" data-bs-target="#certificateModal"
@@ -305,7 +283,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 col-xl-3" data-aos="fade-up">
+                <div class="col-md-6 col-lg-4 col-xl-3" data-aos="zoom-in">
                     <div class="image">
                         <img src="assets/certificate-icon-4.png" class="img-fluid certificate-img" alt="Certificate"
                             data-bs-toggle="modal" data-bs-target="#certificateModal"
@@ -322,7 +300,7 @@
     </section>
 
     <section class="py-5 counters" id="honeyCounters">
-        <div class="container py-5">
+        <div class="container">
             <div class="row g-4 pt-3 mt-3 justify-content-center">
                 <div class="col-md-6 col-lg-3" data-aos="zoom-in">
                     <div class="counter-box text-center">

@@ -591,6 +591,7 @@ html[dir="rtl"] .video-box {
 .counters {
     position: relative;
     overflow: hidden;
+    padding-bottom: 80px !important;
 }
 
 
@@ -728,8 +729,9 @@ html[dir="rtl"] .video-box {
     height: 100%;
     z-index: -1;
     transform: scale(0.5) rotate(-120deg);
-     
+
 }
+
 .counter-box .bg-2 {
     background-image: url(../assets/bee-hant.png);
     position: absolute;
@@ -739,8 +741,9 @@ html[dir="rtl"] .video-box {
     height: 100%;
     z-index: -1;
     transform: scale(0.5) rotate(55deg);
-     
+
 }
+
 .counter-box::after {
     background-image: url(../assets/bee-hant.png);
     content: "";
@@ -751,7 +754,7 @@ html[dir="rtl"] .video-box {
     height: 100%;
     z-index: -1;
     transform: scale(0.5) rotate(-20deg);
-    
+
 }
 
 .counter-box::before {
@@ -765,25 +768,30 @@ html[dir="rtl"] .video-box {
     z-index: -1;
     transform: scale(0.5) rotate(160deg);
 }
+
 @media screen and (min-width:400px) and (max-width:768px) {
     .counter-box .bg {
-    top: -58%;
-    right: -35%;
+        top: -58%;
+        right: -35%;
+    }
+
+    .counter-box .bg-2 {
+        bottom: -58%;
+        left: -35%;
+    }
+
+    .counter-box::after {
+        bottom: -25%;
+        right: -50%;
+
+    }
+
+    .counter-box::before {
+        top: -25%;
+        left: -50%;
+    }
 }
-.counter-box .bg-2 {
-    bottom: -58%;
-    left: -35%;
-}
-.counter-box::after {
-    bottom: -25%;
-    right: -50%;
-    
-}
-.counter-box::before {
-    top: -25%;
-    left: -50%;
-}
-}
+
 .counter-box:hover {
     transform: translateY(-8px);
 }
@@ -1828,12 +1836,34 @@ html[dir="rtl"] .antenae:after {
 
 .certificates-section {
     position: relative;
-    overflow: hidden;
     background-image: url("../assets/shape.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: bottom center;
     height: 100%;
+    padding-top: 60px !important;
+    overflow: hidden;
+}
+
+.certificates-section svg {
+    position: absolute;
+    top: -1%;
+    width: 100%;
+    height: auto;
+    transform: scaleY(-1);
+}
+
+@media screen and (min-width:1200px) {
+    .certificates-section svg {
+        top: -11%;
+    }
+}
+
+#svg .curve {
+    fill: none;
+    stroke: #fef5ee;
+    stroke-width: 120;
+    stroke-linecap: round;
 }
 
 .certificates-section h2 {
@@ -1903,7 +1933,7 @@ html[dir="rtl"] .antenae:after {
     }
 }
 
-.certificates-section::after,
+
 .categories::after {
     content: "";
     position: absolute;
@@ -2457,10 +2487,13 @@ html[dir="rtl"] .modal-header .btn-close {
             rgba(0, 0, 0, 0.3) 100%);
 }
 
-.map-wrapper {
-    width: 100%;
-    height: 600px;
+.map-section {
+    padding-bottom: 80px !important;
     position: relative;
+}
+
+.map-wrapper {
+    height: 500px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -2623,15 +2656,17 @@ html[dir="rtl"] .marker-pin::after {
     overflow: hidden;
     z-index: 1;
 }
-.categories{
-     position: relative;
+
+.categories {
+    position: relative;
     overflow: hidden;
     z-index: 1;
-     background-image: url("../assets/certificate-bg.jpg");
-     background-size: cover;
-     height: 100%;
-     padding-bottom: 120px !important;
+    background-image: url("../assets/certificate-bg.jpg");
+    background-size: cover;
+    height: 100%;
+    padding-bottom: 120px !important;
 }
+
 .contact::after {
     content: "";
     position: absolute;
@@ -3070,4 +3105,38 @@ html[dir="rtl"] .products .bee2 {
     filter: blur(250px);
     z-index: 2;
     pointer-events: none;
+}
+
+
+.map-wrapper {
+    max-width: 95%;
+    margin: auto;
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .map-wrapper {
+        border-radius: 25px;
+    }
+
+    #map {
+        height: 350px;
+    }
+}
+.hero-shape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z' fill='%23f7f3f0'%3E%3C/path%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center;
 }
