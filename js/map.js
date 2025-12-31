@@ -1,5 +1,6 @@
 let map;
 let markers = [];
+
 const visitStoreText = {
     en: "Visit Store",
     ar: "زيارة المتجر",
@@ -29,12 +30,7 @@ const branches = [
     },
     {
         name: { en: "Saudi Arabia Branch", ar: "فرع السعودية", es: "Sucursal Arabia Saudita", fr: "Succursale Arabie Saoudite" },
-        city: {
-            en: "Riyadh",
-            ar: "الرياض",
-            es: "Riad",
-            fr: "Riyad"
-        },
+        city: { en: "Riyadh", ar: "الرياض", es: "Riad", fr: "Riyad" },
         country: {
             en: "Saudi Arabia",
             ar: "المملكة العربية السعودية",
@@ -44,61 +40,50 @@ const branches = [
         coordinates: [24.7136, 46.6753],
         link: "/store-saudi.html"
     },
-        {
-            name: {
-                en: "Qatar Branch",
-                ar: "فرع قطر",
-                es: "Sucursal Catar",
-                fr: "Succursale Qatar"
-            },
-            city: {
-                en: "Doha",
-                ar: "الدوحة",
-                es: "Doha",
-                fr: "Doha"
-            },
-            country: {
-                en: "Qatar",
-                ar: "قطر",
-                es: "Catar",
-                fr: "Qatar"
-            },
-            coordinates: [25.2854, 51.5310],
-            link: "/store-qatar.html"
-        },
-        {
-            name: {
-                en: "Oman Branch",
-                ar: "فرع عمان",
-                es: "Sucursal Omán",
-                fr: "Succursale Oman"
-            },
-            city: {
-                en: "Muscat",
-                ar: "مسقط",
-                es: "Mascate",
-                fr: "Mascate"
-            },
-            country: {
-                en: "Oman",
-                ar: "عمان",
-                es: "Omán",
-                fr: "Oman"
-            },
-            coordinates: [23.5880, 58.3829],
-            link: "/store-oman.html"
-        }
+    {
+        name: { en: "Qatar Branch", ar: "فرع قطر", es: "Sucursal Catar", fr: "Succursale Qatar" },
+        city: { en: "Doha", ar: "الدوحة", es: "Doha", fr: "Doha" },
+        country: { en: "Qatar", ar: "قطر", es: "Catar", fr: "Qatar" },
+        coordinates: [25.2854, 51.5310],
+        link: "/store-qatar.html"
+    },
+    {
+        name: { en: "Oman Branch", ar: "فرع عمان", es: "Sucursal Omán", fr: "Succursale Oman" },
+        city: { en: "Muscat", ar: "مسقط", es: "Mascate", fr: "Mascate" },
+        country: { en: "Oman", ar: "عمان", es: "Omán", fr: "Oman" },
+        coordinates: [23.5880, 58.3829],
+        link: "/store-oman.html"
+    }
 ];
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-    map = L.map("map").setView([25, 50], 5);
+    map = L.map("map", {
+        zoomControl: true,
+        attributionControl: false
+    }).setView([25, 50], 5);
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19
     }).addTo(map);
 
     renderMap(window.currentLang || "en");
+
+    // ✅ الحل النهائي
+    const mapWrapper = document.querySelector(".map-wrapper");
+
+    const resizeObserver = new ResizeObserver(() => {
+        if (map) {
+            map.invalidateSize(true);
+        }
+    });
+
+    resizeObserver.observe(mapWrapper);
+
+    // احتياطي أول تحميل
+    setTimeout(() => {
+        map.invalidateSize(true);
+    }, 500);
 });
 
 function renderMap(lang) {
@@ -113,7 +98,10 @@ function renderMap(lang) {
             <div class="popup-content ${lang === "ar" ? "rtl" : ""}">
                 <h4>${branch.name[lang]}</h4>
                 <p><strong>${branch.city[lang]}</strong>, ${branch.country[lang]}</p>
-                <div class="social-icons"> <a href="#" target="_blank" aria-label="Facebook"> <i class="fab fa-facebook-f"></i> </a> <a href="#" target="_blank" aria-label="Instagram"> <i class="fab fa-instagram"></i> </a> </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
                 <button class="redirect-btn" data-link="${branch.link}">
                     ${visitStoreText[lang]}
                 </button>
@@ -132,6 +120,7 @@ function renderMap(lang) {
         markers.push(marker);
     });
 }
+
 function updateMapLanguage(lang) {
     renderMap(lang);
 }
