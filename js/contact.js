@@ -82,29 +82,4 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    const section = document.querySelector(".contact");
-    const bees = document.querySelectorAll(".contact-bee-shape, .contact-bee-shape-2");
-
-    function moveBee(bee) {
-        const sectionWidth = section.clientWidth;
-        const sectionHeight = section.clientHeight;
-        const beeWidth = bee.offsetWidth;
-        const beeHeight = bee.offsetHeight;
-
-        const maxX = sectionWidth - beeWidth;
-        const maxY = sectionHeight - beeHeight;
-
-        const randomX = Math.random() * maxX;
-        const randomY = Math.random() * maxY;
-        const randomRotate = Math.random() * 40 - 20;
-
-        bee.style.left = `${randomX}px`;
-        bee.style.top = `${randomY}px`;
-        bee.style.transform = `rotate(${randomRotate}deg)`;
-    }
-
-    bees.forEach((bee, index) => {
-        moveBee(bee);
-        setInterval(() => moveBee(bee), 4000 + index * 1500);
-    });
 });

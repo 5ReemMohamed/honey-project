@@ -69,7 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     renderMap(window.currentLang || "en");
 
-    // ✅ الحل النهائي
     const mapWrapper = document.querySelector(".map-wrapper");
 
     const resizeObserver = new ResizeObserver(() => {
@@ -80,7 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     resizeObserver.observe(mapWrapper);
 
-    // احتياطي أول تحميل
     setTimeout(() => {
         map.invalidateSize(true);
     }, 500);
@@ -124,5 +122,4 @@ function renderMap(lang) {
 function updateMapLanguage(lang) {
     renderMap(lang);
 }
-
 window.updateMapLanguage = updateMapLanguage;
