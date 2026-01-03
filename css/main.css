@@ -1972,6 +1972,7 @@ html[dir="rtl"] .marker-pin::after {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    background-color: #ffefbf;
 }
 
 .contact .contact-info .icon {
