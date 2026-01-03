@@ -16,8 +16,8 @@
     <title>Document</title>
 </head>
 
-<body class="categories-body">
-    <nav class="navbar navbar-expand-lg shadow-sm" id="mainNavbar">
+<body>
+    <nav class="navbar navbar-expand-lg shadow-sm mb-5" id="mainNavbar">
         <div class="container-lg ">
             <a class="navbar-brand" href="index.html">
                 <div class="logo-icon">
@@ -36,13 +36,13 @@
                     <li class="nav-item"><a class="nav-link" href="about-us.html" data-en="About Us" data-ar="من نحن"
                             data-es="Sobre Nosotros" data-fr="À propos">About Us</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="#categories" data-en="Products" data-ar="المنتجات"
-                            data-es="Productos" data-fr="Produits">Products</a>
+                    <li class="nav-item"><a class="nav-link" href="categories.html" data-en="Products"
+                            data-ar="المنتجات" data-es="Productos" data-fr="Produits">Products</a>
                     </li>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="#" data-en="Partners" data-ar="شركاؤنا"
                             data-es="Socios" data-fr="Partenaires">Partners</a></li>
-                    <li class="nav-item"><a class="nav-link" href="news-blogs.html" data-en="News" data-ar="الأخبار"
+                    <li class="nav-item"><a class="nav-link" href="#latestNews" data-en="News" data-ar="الأخبار"
                             data-es="Noticias" data-fr="Actualités">News</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact-us.html" data-en="Contact Us"
                             data-ar="تواصل معنا" data-es="Contáctanos" data-fr="Contactez-nous">Contact
@@ -63,62 +63,40 @@
             </div>
         </div>
     </nav>
-    <section class="py-5 categories" id="categories">
+    <section class="blogs-news py-5" id="latestNews">
         <div class="container py-5">
             <div class="pt-5">
-                <div class="heading pt-5">
-                    <h2 data-aos="fade-up" class="mb-3 text-center" data-en="Explore Our Categories" data-ar="استكشف فئاتنا"
-                        data-es="Explora nuestras categorías" data-fr="Découvrez nos catégories">
-                        Explore Our Categories
-                    </h2>
-                </div>
-                <div class="row g-4 pt-3 mt-3">
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                        <a href="products.html" class="category-box">
+                <div class="row g-4 pt-5">
+                    <div class="col-md-6">
+                        <a href="news.html" class="news-box">
                             <img src="assets/test.jpg" alt="Best Hive">
                             <div class="overlay"></div>
                             <div class="content">
-                                <h3 data-en="Honey Products" data-ar="منتجات العسل" data-es="Productos de miel"
-                                    data-fr="Produits de miel">
-                                    Honey Products
+                                <h3 >
+                                    News
                                 </h3>
 
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                        <a href="products.html" class="category-box">
-                            <img src="assets/test.jpg" alt="Best Sellers">
+                    <div class="col-md-6">
+                        <a href="blogs.html" class="news-box">
+                            <img src="assets/test.jpg" alt="Best Hive">
                             <div class="overlay"></div>
                             <div class="content">
-                                <h3 data-en="Creamed Honey" data-ar="العسل المخفوق" data-es="Miel batido"
-                                    data-fr="Miel crémeux">
-                                    Creamed Honey
+                                <h3>
+                                    Blogs
                                 </h3>
 
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                        <a href="products.html" class="category-box">
-                            <img src="assets/test.jpg" alt="Keep Bees">
-                            <div class="overlay"></div>
-                            <div class="content">
-                                <h3 data-en="Drinks" data-ar="مشروبات" data-es="Bebidas" data-fr="Boissons">
-                                    Drinks
-                                </h3>
-
-                            </div>
-                        </a>
-                    </div>
-
                 </div>
             </div>
         </div>
     </section>
-
     <footer class="footer-section">
-        = <div class="container py-5">
+        <div class="container py-5">
             <div class="row g-4 align-items-stretch">
                 <div class="col-lg-4 col-md-6 d-flex align-items-center">
                     <div class="footer-logo d-flex align-items-center gap-0">
@@ -145,7 +123,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#categories" data-en="Products" data-ar="المنتجات" data-es="Productos"
+                            <a href="categories.html" data-en="Products" data-ar="المنتجات" data-es="Productos"
                                 data-fr="Produits">
                                 Products
                             </a>
@@ -156,7 +134,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="news-blogs.html" data-en="News" data-ar="الأخبار" data-es="Noticias"
+                            <a href="#latestNews" data-en="News" data-ar="الأخبار" data-es="Noticias"
                                 data-fr="Actualités">
                                 News
                             </a>
@@ -227,20 +205,22 @@
 
         </div>
     </footer>
-
     <div class="whatsapp-wrapper">
         <span class="whatsapp-message" data-en="Need help?" data-ar="هل تحتاج مساعدة؟" data-es="Necesitas ayuda?"
             data-fr="Besoin d'aide ?">
             Need help?
         </span>
 
+
         <a href="#" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
+
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script src="js/main.js"></script>
 
 </body>

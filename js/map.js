@@ -56,12 +56,21 @@ const branches = [
     }
 ];
 
+const brownIcon = L.icon({
+    iconUrl: "assets/marker-brown.svg",
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [0, -35],
+    shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+    shadowSize: [41, 41]
+});
+
 document.addEventListener("DOMContentLoaded", () => {
 
     map = L.map("map", {
         zoomControl: true,
         attributionControl: false
-    }).setView([25, 50], 5);
+    });
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19
@@ -72,9 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const mapWrapper = document.querySelector(".map-wrapper");
 
     const resizeObserver = new ResizeObserver(() => {
-        if (map) {
-            map.invalidateSize(true);
-        }
+        map.invalidateSize(true);
     });
 
     resizeObserver.observe(mapWrapper);
@@ -85,12 +92,19 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function renderMap(lang) {
+
     markers.forEach(marker => map.removeLayer(marker));
     markers = [];
 
+    const bounds = L.latLngBounds([]);
+
     branches.forEach(branch => {
 
-        const marker = L.marker(branch.coordinates).addTo(map);
+        const marker = L.marker(branch.coordinates, {
+            icon: brownIcon
+        }).addTo(map);
+
+        bounds.extend(branch.coordinates);
 
         const popupHTML = `
             <div class="popup-content ${lang === "ar" ? "rtl" : ""}">
@@ -111,15 +125,37 @@ function renderMap(lang) {
         marker.on("popupopen", () => {
             const btn = document.querySelector(".redirect-btn");
             if (btn) {
-                btn.onclick = () => window.location.href = btn.dataset.link;
+                btn.onclick = () => {
+                    window.location.href = btn.dataset.link;
+                };
             }
         });
 
         markers.push(marker);
+    });
+
+    fitMapToBranches();
+}
+
+function fitMapToBranches() {
+
+    if (!markers.length) return;
+
+    const bounds = L.latLngBounds(markers.map(m => m.getLatLng()));
+    const isMobile = window.innerWidth < 768;
+
+    map.fitBounds(bounds, {
+        padding: isMobile ? [40, 40] : [80, 80],
+        maxZoom: isMobile ? 4 : 6,
+        animate: true
     });
 }
 
 function updateMapLanguage(lang) {
     renderMap(lang);
 }
+
 window.updateMapLanguage = updateMapLanguage;
+window.addEventListener("resize", () => {
+    fitMapToBranches();
+});
