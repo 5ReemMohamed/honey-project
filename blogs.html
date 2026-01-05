@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg shadow-sm mb-5" id="mainNavbar">
+        <div class="container-lg ">
+            <a class="navbar-brand" href="index.html">
+                <div class="logo-icon">
+                    <img src="assets/logo.png" height="70" class="w-100 dark-logo">
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto gap-3 text-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html" data-en="Home" data-ar="الرئيسية"
+                            data-es="Inicio" data-fr="Accueil">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about-us.html" data-en="About Us" data-ar="من نحن"
+                            data-es="Sobre Nosotros" data-fr="À propos">About Us</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="categories.html" data-en="Products"
+                            data-ar="المنتجات" data-es="Productos" data-fr="Produits">Products</a>
+                    </li>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-en="Partners" data-ar="شركاؤنا"
+                            data-es="Socios" data-fr="Partenaires">Partners</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news-blogs.html" data-en="News" data-ar="الأخبار"
+                            data-es="Noticias" data-fr="Actualités">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact-us.html" data-en="Contact Us"
+                            data-ar="تواصل معنا" data-es="Contáctanos" data-fr="Contactez-nous">Contact
+                            Us</a></li>
+                </ul>
+                <div class="dropdown p-4 p-lg-0 d-flex justify-content-center align-items-center">
+                    <button class="btn btn-warning dropdown-toggle" type="button" id="languageDropdown"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Language
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
+                        <li><a class="dropdown-item" href="#" data-lang="ar">Arabic</a></li>
+                        <li><a class="dropdown-item" href="#" data-lang="es">Spanish</a></li>
+                        <li><a class="dropdown-item" href="#" data-lang="fr">French</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="blogs-section py-5" id="latestNews">
+        <div class="container py-5">
+            <div class="pt-5">
+                <div class="header pt-5 text-center mb-5">
+                    <h2 data-en="Explore Our Blogs" data-ar="استكشف مدوناتنا" data-fr="Découvrez nos blogs"
+                        data-es="Explora nuestros blogs">
+                        Explore Our Blogs
+                    </h2>
+
+                </div>
+                <div class="row g-4" data-aos="fade-up">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="img">
+                                <img src="assets/blog-1.jpg" class="card-img-top" alt="Blog 2">
+                            </div>
+                            <div class="card-body">
+                                <div class="date d-flex gap-2 align-items-center mb-3">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span data-en="May 21, 2025" data-ar="٢١ مايو ٢٠٢٥" data-es="21 de mayo de 2025"
+                                        data-fr="21 mai 2025">
+                                        May 21, 2025
+                                    </span>
+                                </div>
+
+                                <h3 class="card-title mb-3">
+                                    <a href="blog-details.html" data-en="This season, increased yield of honey"
+                                        data-ar="هذا الموسم، زيادة إنتاجية العسل"
+                                        data-es="Esta temporada, mayor rendimiento de miel"
+                                        data-fr="Cette saison, rendement accru de miel">
+                                        This season, increased yield of honey
+                                    </a>
+                                </h3>
+
+                                <p class="card-text"
+                                    data-en="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptate ea debitis aliquid voluptatem voluptates et quasi consectetur. Ut possimus fuga ad culpa doloremque eaque placeat voluptates. Quod, voluptatum nam!"
+                                    data-ar="لوريم ايبسوم نص تجريبي يعرض الفقرة بشكل واضح ومفهوم باللغة العربية."
+                                    data-es="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Texto de ejemplo en español."
+                                    data-fr="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Texte d'exemple en français.">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptate ea debitis
+                                    aliquid voluptatem voluptates et quasi consectetur. Ut possimus fuga ad culpa
+                                    doloremque eaque placeat voluptates. Quod, voluptatum nam!
+                                </p>
+
+                                <div class="blog-footer">
+                                    <a href="blog-details.html" class="blog-link d-flex align-items-center gap-2"
+                                        data-en="Read More <i class='fas fa-arrow-right mt-1'></i>"
+                                        data-ar="اقرأ المزيد <i class='fas fa-arrow-left mt-1'></i>"
+                                        data-es="Leer Más <i class='fas fa-arrow-right mt-1'></i>"
+                                        data-fr="Lire la suite <i class='fas fa-arrow-right mt-1'></i>">
+                                        <span>Read More</span> <i class="fas fa-arrow-right mt-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="img">
+                                <img src="assets/blog-2.jpg" class="card-img-top" alt="Blog 2">
+                            </div>
+                            <div class="card-body">
+                                <div class="date d-flex gap-2 align-items-center mb-3">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span data-en="February 21, 2025" data-ar="٢١ فبراير ٢٠٢٥"
+                                        data-es="21 de febrero de 2025" data-fr="21 février 2025">
+                                        February 21, 2025
+                                    </span>
+                                </div>
+
+                                <h3 class="card-title mb-3">
+                                    <a href="blog-details.html" data-en="Our beekeepers begin to collect honey"
+                                        data-ar="يبدأ مربي النحل لدينا في جمع العسل"
+                                        data-es="Nuestros apicultores comienzan a recolectar miel"
+                                        data-fr="Nos apiculteurs commencent à récolter le miel">
+                                        Our beekeepers begin to collect honey
+                                    </a>
+                                </h3>
+
+                                <p class="card-text"
+                                    data-en="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptate ea debitis aliquid voluptatem voluptates et quasi consectetur. Ut possimus fuga ad culpa doloremque eaque placeat voluptates. Quod, voluptatum nam!"
+                                    data-ar="لوريم ايبسوم نص تجريبي يعرض الفقرة بشكل واضح ومفهوم باللغة العربية."
+                                    data-es="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Texto de ejemplo en español."
+                                    data-fr="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Texte d'exemple en français.">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptate ea debitis
+                                    aliquid voluptatem voluptates et quasi consectetur. Ut possimus fuga ad culpa
+                                    doloremque eaque placeat voluptates. Quod, voluptatum nam!
+                                </p>
+
+                                <div class="blog-footer">
+                                    <a href="blog-details.html" class="blog-link d-flex align-items-center gap-2"
+                                        data-en="Read More <i class='fas fa-arrow-right mt-1'></i>"
+                                        data-ar="اقرأ المزيد <i class='fas fa-arrow-left mt-1'></i>"
+                                        data-es="Leer Más <i class='fas fa-arrow-right mt-1'></i>"
+                                        data-fr="Lire la suite <i class='fas fa-arrow-right mt-1'></i>">
+                                        <span>Read More</span> <i class="fas fa-arrow-right mt-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="img">
+                                <img src="assets/blog-3.jpg" class="card-img-top" alt="Blog 3">
+                            </div>
+                            <div class="card-body">
+                                <div class="date d-flex gap-2 align-items-center mb-3">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span data-en="October 26, 2017" data-ar="٢٦ أكتوبر ٢٠١٧"
+                                        data-es="26 de octubre de 2017" data-fr="26 octobre 2017">
+                                        October 26, 2017
+                                    </span>
+                                </div>
+
+                                <h3 class="card-title mb-3">
+                                    <a href="blog-details.html" data-en="Definition of the honey naturalness"
+                                        data-ar="تعريف طبيعة العسل" data-es="Definición de la naturalidad de la miel"
+                                        data-fr="Définition de la naturalité du miel">
+                                        Definition of the honey naturalness
+                                    </a>
+                                </h3>
+
+                                <p class="card-text"
+                                    data-en="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptate ea debitis aliquid voluptatem voluptates et quasi consectetur. Ut possimus fuga ad culpa doloremque eaque placeat voluptates. Quod, voluptatum nam!"
+                                    data-ar="لوريم ايبسوم نص تجريبي يعرض الفقرة بشكل واضح ومفهوم باللغة العربية."
+                                    data-es="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Texto de ejemplo en español."
+                                    data-fr="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Texte d'exemple en français.">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptate ea debitis
+                                    aliquid voluptatem voluptates et quasi consectetur. Ut possimus fuga ad culpa
+                                    doloremque eaque placeat voluptates. Quod, voluptatum nam!
+                                </p>
+
+                                <div class="blog-footer">
+                                    <a href="blog-details.html" class="blog-link d-flex align-items-center gap-2"
+                                        data-en="Read More <i class='fas fa-arrow-right mt-1'></i>"
+                                        data-ar="اقرأ المزيد <i class='fas fa-arrow-left mt-1'></i>"
+                                        data-es="Leer Más <i class='fas fa-arrow-right mt-1'></i>"
+                                        data-fr="Lire la suite <i class='fas fa-arrow-right mt-1'></i>">
+                                        <span>Read More</span> <i class="fas fa-arrow-right mt-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-section">
+        <div class="container py-5">
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-4 col-md-6 d-flex align-items-center">
+                    <div class="footer-logo d-flex align-items-center gap-0">
+                        <img src="assets/logo.png" alt="ee and honey" height="100">
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title" data-en="Links" data-ar="روابط" data-es="Enlaces" data-fr="Liens">
+                        Links
+                    </h5>
+
+                    <ul class="footer-links">
+                        <li>
+                            <a href="index.html" data-en="Home" data-ar="الرئيسية" data-es="Inicio" data-fr="Accueil">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about-us.html" data-en="About Us" data-ar="من نحن" data-es="Sobre Nosotros"
+                                data-fr="À propos">
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="categories.html" data-en="Products" data-ar="المنتجات" data-es="Productos"
+                                data-fr="Produits">
+                                Products
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-en="Partner" data-ar="شركاؤنا" data-es="Socio" data-fr="Partenaire">
+                                Partner
+                            </a>
+                        </li>
+                        <li>
+                            <a href="news-blogs.html" data-en="News" data-ar="الأخبار" data-es="Noticias"
+                                data-fr="Actualités">
+                                News
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact-us.html" data-en="Contact Us" data-ar="تواصل معنا" data-es="Contáctanos"
+                                data-fr="Contactez-nous">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title" data-en="Products" data-ar="المنتجات" data-es="Productos"
+                        data-fr="Produits">
+                        Products
+                    </h5>
+
+                    <ul class="footer-links">
+                        <li>
+                            <a href="products.html" data-en="Honey Products" data-ar="منتجات العسل"
+                                data-es="Productos de miel" data-fr="Produits de miel">
+                                Honey Products
+                            </a>
+                        </li>
+                        <li>
+                            <a href="products.html" data-en="Creamed Honey" data-ar="العسل الكريمي"
+                                data-es="Miel cremado" data-fr="Miel crémeux">
+                                Creamed Honey
+                            </a>
+                        </li>
+                        <li>
+                            <a href="products.html" data-en="Drinks" data-ar="المشروبات" data-es="Bebidas"
+                                data-fr="Boissons">
+                                Drinks
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title" data-en="Newsletter" data-ar="النشرة الإخبارية" data-es="Boletín"
+                        data-fr="Newsletter">
+                        Newsletter
+                    </h5>
+
+                    <p class="footer-text"
+                        data-en="Sign Up For Our Email List To Receive Sweet Deals, Company News And More From Bee & Honey."
+                        data-ar="اشترك في قائمتنا البريدية لتصلك عروض حلوة، وأخبار الشركة والمزيد من Bee & Honey."
+                        data-es="Suscríbete a nuestra lista de correo para recibir ofertas dulces, noticias de la empresa y más de Bee & Honey."
+                        data-fr="Inscrivez-vous à notre liste de diffusion pour recevoir des offres spéciales, des nouvelles de l'entreprise et plus de Bee & Honey.">
+                        Sign Up For Our Email List To Receive Sweet Deals, Company News And More From Bee & Honey.
+                    </p>
+
+                    <form class="newsletter-form mt-4">
+                        <input type="email" placeholder="Email Address" data-placeholder-en="Email Address"
+                            data-placeholder-ar="البريد الإلكتروني" data-placeholder-es="Correo electrónico"
+                            data-placeholder-fr="Adresse e-mail" required>
+                        <button type="submit" data-en="Submit" data-ar="إرسال" data-es="Enviar" data-fr="Envoyer">
+                            Submit
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <div class="whatsapp-wrapper">
+        <span class="whatsapp-message" data-en="Need help?" data-ar="هل تحتاج مساعدة؟" data-es="Necesitas ayuda?"
+            data-fr="Besoin d'aide ?">
+            Need help?
+        </span>
+
+
+        <a href="#" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

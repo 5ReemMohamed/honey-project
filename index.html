@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body class="home-body">
+
+    <section class="hero">
+        <div class="hero-video-wrapper">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="assets/header.mp4" type="video/mp4">
+            </video>
+        </div>
+        <nav class="navbar navbar-expand-lg" id="mainNavbar">
+            <div class="container-lg ">
+                <a class="navbar-brand" href="index.html">
+                    <div class="logo-icon">
+                        <img src="assets/logo.png" height="70" class="w-100 dark-logo">
+                        <img src="assets/light-logo.png" height="70" class="w-100 light-logo">
+                    </div>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto gap-3 text-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html" data-en="Home" data-ar="الرئيسية" data-es="Inicio"
+                                data-fr="Accueil">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about-us.html" data-en="About Us" data-ar="من نحن"
+                                data-es="Sobre Nosotros" data-fr="À propos">
+                                About Us
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="categories.html" data-en="Products" data-ar="المنتجات"
+                                data-es="Productos" data-fr="Produits">
+                                Products
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-en="Partners" data-ar="شركاؤنا" data-es="Socios"
+                                data-fr="Partenaires">
+                                Partners
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="news-blogs.html" data-en="News" data-ar="الأخبار"
+                                data-es="Noticias" data-fr="Actualités">
+                                News
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact-us.html" data-en="Contact Us" data-ar="تواصل معنا"
+                                data-es="Contáctanos" data-fr="Contactez-nous">
+                                Contact Us
+                            </a>
+                        </li>
+
+                    </ul>
+                    <div class="dropdown p-4 p-lg-0 d-flex justify-content-center align-items-center">
+                        <button class="btn btn-warning dropdown-toggle" type="button" id="languageDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Language
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
+                            <li><a class="dropdown-item" href="#" data-lang="ar">Arabic</a></li>
+                            <li><a class="dropdown-item" href="#" data-lang="es">Spanish</a></li>
+                            <li><a class="dropdown-item" href="#" data-lang="fr">French</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+        <div class="hero-inner py-5">
+            <div class="rotating-text-wrapper mb-4">
+                <h2 class="t1">the best quality Honey from our farm</h2>
+
+                <h2 class="t2">second title is shown here</h2>
+
+                <h2 class="t3">
+                    third title is shown here
+                </h2>
+            </div>
+            <div class="hero-btns">
+                <a href="#brief" class="btn btn-warning">
+                    <span data-en="Explore More" data-ar="اكتشف المزيد" data-es="Explorar más" data-fr="Explorer plus">
+                        Explore More
+                    </span>
+                    <span class="arrow-circle"><i class="fas fa-arrow-down"></i></span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <section class="py-5 about-brief" id="brief">
+        <div class="container py-5">
+            <div class="row g-4 justify-content-center align-items-center">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="text p-3">
+                        <h2 data-en="Brief About Bee&Honey" data-ar="نبذة عن Bee&Honey" data-es="Breve sobre Bee&Honey"
+                            data-fr="Bref sur Bee&Honey">
+                            Brief About Bee&Honey
+                        </h2>
+                        <p class="text-muted"
+                            data-en="Bee&Honey is a brand under Yemeni Honey House, founded in 2007, with extensive experience in producing and marketing natural honey to the highest quality standards."
+                            data-ar="Bee&Honey هي علامة تجارية تابعة لـ Yemeni Honey House، تأسست عام 2007، ولديها خبرة واسعة في إنتاج وتسويق العسل الطبيعي بأعلى معايير الجودة."
+                            data-es="Bee&Honey es una marca de Yemeni Honey House, fundada en 2007, con amplia experiencia en la producción y comercialización de miel natural con los más altos estándares de calidad."
+                            data-fr="Bee&Honey est une marque de Yemeni Honey House, fondée en 2007, avec une vaste expérience dans la production et la commercialisation de miel naturel aux normes de qualité les plus élevées.">
+                            Bee&Honey is a brand under Yemeni Honey House, founded in 2007, with extensive experience in
+                            producing and marketing natural honey to the highest quality standards.
+                        </p>
+                        <p class="text-muted"
+                            data-en="Bee&Honey was born from our passion for offering modern, natural products that meet the needs of today's consumer, providing a unique experience that blends flavor and benefits."
+                            data-ar="تأسست Bee&Honey من شغفنا بتقديم منتجات طبيعية وعصرية تلبي احتياجات المستهلك اليوم، موفرة تجربة فريدة تمزج بين الطعم والفوائد."
+                            data-es="Bee&Honey nació de nuestra pasión por ofrecer productos modernos y naturales que satisfagan las necesidades del consumidor actual, proporcionando una experiencia única que combina sabor y beneficios."
+                            data-fr="Bee&Honey est née de notre passion pour offrir des produits modernes et naturels répondant aux besoins du consommateur d'aujourd'hui, offrant une expérience unique mêlant saveur et bienfaits.">
+                            Bee&Honey was born from our passion for offering modern, natural products that meet the
+                            needs of today's consumer, providing a unique experience that blends flavor and benefits.
+                        </p>
+
+                        <p class="text-muted"
+                            data-en="We take great care in selecting our apiaries and use sustainable methods in our production that protect the environment and safeguard bees. Our products, whether raw honey or natural honey beverages, reflect our commitment to unmatched quality and true purity, free from any artificial additives."
+                            data-ar="نولي اهتمامًا كبيرًا في اختيار مزارعنا ونستخدم طرقًا مستدامة في الإنتاج تحمي البيئة وتحافظ على النحل. منتجاتنا، سواء كانت عسلًا خامًا أو مشروبات عسل طبيعية، تعكس التزامنا بالجودة الفائقة والنقاء الحقيقي، خالية من أي إضافات صناعية."
+                            data-es="Cuidamos mucho la selección de nuestras colmenas y usamos métodos sostenibles en nuestra producción que protegen el medio ambiente y resguardan a las abejas. Nuestros productos, ya sea miel cruda o bebidas de miel natural, reflejan nuestro compromiso con una calidad inigualable y pureza verdadera, libres de aditivos artificiales."
+                            data-fr="Nous prenons grand soin dans la sélection de nos ruches et utilisons des méthodes durables dans notre production qui protègent l'environnement et préservent les abeilles. Nos produits, qu'il s'agisse de miel brut ou de boissons au miel naturel, reflètent notre engagement envers une qualité inégalée et une pureté réelle, sans aucun additif artificiel.">
+                            We take great care in selecting our apiaries and use sustainable methods in our production
+                            that protect the environment and safeguard bees. Our products, whether raw honey or natural
+                            honey beverages, reflect our commitment to unmatched quality and true purity, free from any
+                            artificial additives.
+                        </p>
+
+                        <p class="text-muted"
+                            data-en="At Bee&Honey, we believe that honey is more than just food, it's a lifestyle that energizes you, strengthens immunity, and naturally supports the body's balance."
+                            data-ar="في Bee&Honey، نؤمن أن العسل أكثر من مجرد طعام، إنه أسلوب حياة يمنحك الطاقة، يقوي المناعة، ويدعم توازن الجسم بشكل طبيعي."
+                            data-es="En Bee&Honey, creemos que la miel es más que un alimento, es un estilo de vida que te energiza, fortalece la inmunidad y apoya naturalmente el equilibrio del cuerpo."
+                            data-fr="Chez Bee&Honey, nous croyons que le miel est plus qu'un simple aliment, c'est un mode de vie qui vous énergise, renforce l'immunité et soutient naturellement l'équilibre du corps.">
+                            At Bee&Honey, we believe that honey is more than just food, it's a lifestyle that energizes
+                            you, strengthens immunity, and naturally supports the body's balance.
+                        </p>
+
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="image">
+                        <img src="assets/brief-image.png" class="w-100" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="section-divider"></div>
+
+    <section class="py-5 swiper-section">
+        <div class="swiper products-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+            </div>
+
+        </div>
+    </section>
+    <section class="map-section py-5" data-aos="zoom-in">
+        <div class="container-fluid px-0 pt-5">
+            <div class="heading">
+                <div class="container pb-4">
+                    <h2 class="text-center mb-2" data-en="Our Branch Locations" data-ar="مواقع فروعنا"
+                        data-es="Nuestras ubicaciones de sucursales" data-fr="Nos emplacements de succursales">
+                        Our Branch Locations
+                    </h2>
+
+                </div>
+            </div>
+            <div class="row g-4 align-items-center mt-4">
+                <div class="col-lg-6">
+                    <div class="map-wrapper">
+                        <div id="map"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="branches px-2">
+                        <div class="row g-4">
+                            <div class="col-6 col-md-4 col-lg-6">
+                                <div class="branch-box shadow-sm">
+                                    <div class="title">
+                                        <h3 data-en="Yemen" data-ar="اليمن" data-fr="Yémen" data-es="Yemen">
+                                            Yemen
+                                        </h3>
+
+                                    </div>
+                                    <div class="desc">
+                                        <p class="text-muted"
+                                            data-en="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ut sit iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, architecto."
+                                            data-ar="هذا نص تجريبي يُستخدم لعرض شكل المحتوى داخل التصميم، ويمكن استبداله بالنص الحقيقي لاحقًا."
+                                            data-fr="Ceci est un texte factice utilisé pour montrer la mise en page du contenu, pouvant être remplacé ultérieurement."
+                                            data-es="Este es un texto de ejemplo utilizado para mostrar el diseño del contenido y puede ser reemplazado más adelante.">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ut sit
+                                            iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
+                                            architecto.
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-6">
+                                <div class="branch-box shadow-sm">
+                                    <div class="title">
+                                        <h3 data-en="Jordan" data-ar="الأردن" data-fr="Jordanie" data-es="Jordania">
+                                            Jordan
+                                        </h3>
+
+                                    </div>
+                                    <div class="desc">
+                                        <p class="text-muted"
+                                            data-en="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ut sit iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, architecto."
+                                            data-ar="هذا نص تجريبي يُستخدم لعرض شكل المحتوى داخل التصميم، ويمكن استبداله بالنص الحقيقي لاحقًا."
+                                            data-fr="Ceci est un texte factice utilisé pour montrer la mise en page du contenu, pouvant être remplacé ultérieurement."
+                                            data-es="Este es un texto de ejemplo utilizado para mostrar el diseño del contenido y puede ser reemplazado más adelante.">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ut sit
+                                            iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
+                                            architecto.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-6">
+                                <div class="branch-box shadow-sm">
+                                    <div class="title">
+                                        <h3 data-en="Saudi Arabia" data-ar="المملكة العربية السعودية"
+                                            data-fr="Arabie saoudite" data-es="Arabia Saudita">
+                                            Saudi Arabia
+                                        </h3>
+
+                                    </div>
+                                    <div class="desc">
+                                        <p class="text-muted"
+                                            data-en="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ut sit iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, architecto."
+                                            data-ar="هذا نص تجريبي يُستخدم لعرض شكل المحتوى داخل التصميم، ويمكن استبداله بالنص الحقيقي لاحقًا."
+                                            data-fr="Ceci est un texte factice utilisé pour montrer la mise en page du contenu, pouvant être remplacé ultérieurement."
+                                            data-es="Este es un texto de ejemplo utilizado para mostrar el diseño del contenido y puede ser reemplazado más adelante.">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ut sit
+                                            iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
+                                            architecto.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-6">
+                                <div class="branch-box shadow-sm">
+                                    <div class="title">
+                                        <h3 data-en="Qatar" data-ar="قطر" data-fr="Qatar" data-es="Catar">
+                                            Qatar
+                                        </h3>
+
+                                    </div>
+                                    <div class="desc">
+                                        <p class="text-muted"
+                                            data-en="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ut sit iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, architecto."
+                                            data-ar="هذا نص تجريبي يُستخدم لعرض شكل المحتوى داخل التصميم، ويمكن استبداله بالنص الحقيقي لاحقًا."
+                                            data-fr="Ceci est un texte factice utilisé pour montrer la mise en page du contenu, pouvant être remplacé ultérieurement."
+                                            data-es="Este es un texto de ejemplo utilizado para mostrar el diseño del contenido y puede ser reemplazado más adelante.">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ut sit
+                                            iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
+                                            architecto.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-6">
+                                <div class="branch-box shadow-sm">
+                                    <div class="title">
+                                        <h3 data-en="Oman" data-ar="عُمان" data-fr="Oman" data-es="Omán">
+                                            Oman
+                                        </h3>
+
+                                    </div>
+                                    <div class="desc">
+                                        <p class="text-muted"
+                                            data-en="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ut sit iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, architecto."
+                                            data-ar="هذا نص تجريبي يُستخدم لعرض شكل المحتوى داخل التصميم، ويمكن استبداله بالنص الحقيقي لاحقًا."
+                                            data-fr="Ceci est un texte factice utilisé pour montrer la mise en page du contenu, pouvant être remplacé ultérieurement."
+                                            data-es="Este es un texto de ejemplo utilizado para mostrar el diseño del contenido y puede ser reemplazado más adelante.">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ut sit
+                                            iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
+                                            architecto.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-6">
+                                <div class="branch-box shadow-sm">
+                                    <div class="title">
+                                        <h3 data-en="The UAE" data-ar="الإمارات العربية المتحدة"
+                                            data-fr="Les Émirats arabes unis" data-es="Los Emiratos Árabes Unidos">
+                                            The UAE
+                                        </h3>
+
+                                    </div>
+                                    <div class="desc">
+                                        <p class="text-muted"
+                                            data-en="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ut sit iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, architecto."
+                                            data-ar="هذا نص تجريبي يُستخدم لعرض شكل المحتوى داخل التصميم، ويمكن استبداله بالنص الحقيقي لاحقًا."
+                                            data-fr="Ceci est un texte factice utilisé pour montrer la mise en page du contenu, pouvant être remplacé ultérieurement."
+                                            data-es="Este es un texto de ejemplo utilizado para mostrar el diseño del contenido y puede ser reemplazado más adelante.">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ut sit
+                                            iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
+                                            architecto.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-6">
+                                <div class="branch-box shadow-sm">
+                                    <div class="title">
+                                        <h3 data-en="America" data-ar="الولايات المتحدة الأمريكية"
+                                            data-fr="États-Unis d’Amérique" data-es="Estados Unidos de América">
+                                            America
+                                        </h3>
+
+                                    </div>
+                                    <div class="desc">
+                                        <p class="text-muted"
+                                            data-en="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ut sit iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, architecto."
+                                            data-ar="هذا نص تجريبي يُستخدم لعرض شكل المحتوى داخل التصميم، ويمكن استبداله بالنص الحقيقي لاحقًا."
+                                            data-fr="Ceci est un texte factice utilisé pour montrer la mise en page du contenu, pouvant être remplacé ultérieurement."
+                                            data-es="Este es un texto de ejemplo utilizado para mostrar el diseño del contenido y puede ser reemplazado más adelante.">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ut sit
+                                            iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
+                                            architecto.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="certificates-section py-5">
+        <div class="container pb-5">
+            <h2 class="text-center mt-2" data-aos="zoom-in" data-en="Our Certificates" data-ar="شهاداتنا"
+                data-es="Nuestros certificados" data-fr="Nos certificats">
+                Our Certificates
+            </h2>
+            <div class="row g-4 mt-5">
+                <div class="col-md-2 col-lg-4">
+                    <div class="certificate-item" data-aos="zoom-in">
+                        <div class="image mx-auto">
+                            <img src="assets/certificate-icon-1.png" class="img-fluid certificate-img" alt="Certificate"
+                                data-bs-toggle="modal" data-bs-target="#certificateModal"
+                                data-bs-imgs="assets/certificate-1.jpg,assets/certificate-3.jpg">
+                            <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
+                                data-bs-imgs="assets/certificate-1.jpg,assets/certificate-3.jpg">
+                                <i class="fa-regular fa-hand-pointer"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-lg-4">
+                    <div class="certificate-item" data-aos="zoom-in">
+                        <div class="image mx-auto">
+                            <img src="assets/certificate-icon-2.png" class="img-fluid certificate-img" alt="Certificate"
+                                data-bs-toggle="modal" data-bs-target="#certificateModal"
+                                data-bs-imgs="assets/certificate-2.jpg">
+                            <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
+                                data-bs-img="assets/certificate-2.jpg">
+                                <i class="fa-regular fa-hand-pointer"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-lg-4">
+                    <div class="certificate-item" data-aos="zoom-in">
+                        <div class="image mx-auto">
+                            <img src="assets/certificate-icon-3.png" class="img-fluid certificate-img" alt="Certificate"
+                                data-bs-toggle="modal" data-bs-target="#certificateModal"
+                                data-bs-imgs="assets/certificate-4.jpg">
+                            <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
+                                data-bs-img="assets/certificate-3.jpg">
+                                <i class="fa-regular fa-hand-pointer"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-lg-4">
+                    <div class="certificate-item" data-aos="zoom-in">
+                        <div class="image mx-auto">
+                            <img src="assets/certificate-icon-4.png" class="img-fluid certificate-img" alt="Certificate"
+                                data-bs-toggle="modal" data-bs-target="#certificateModal"
+                                data-bs-imgs="assets/certificate-5.jpg">
+                            <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
+                                data-bs-img="assets/certificate-5.jpg">
+                                <i class="fa-regular fa-hand-pointer"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-lg-4">
+                    <div class="certificate-item" data-aos="zoom-in">
+                        <div class="image mx-auto">
+                            <img src="assets/certificate-icon-5.png" class="img-fluid certificate-img" alt="Certificate"
+                                data-bs-toggle="modal" data-bs-target="#certificateModal"
+                                data-bs-imgs="assets/certificate-5.jpg">
+                            <div class="view-icon" data-bs-toggle="modal" data-bs-target="#certificateModal"
+                                data-bs-img="assets/certificate-5.jpg">
+                                <i class="fa-regular fa-hand-pointer"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <section class="py-5 counters" id="honeyCounters">
+        <div class="container">
+            <div class="row g-4 pt-3 mt-3 justify-content-center">
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in">
+                    <div class="counter-box text-center">
+                        <div class="bg"></div>
+                        <div class="icon"><i class="fas fa-cart-shopping"></i></div>
+                        <div class="number" data-target="3000000">0</div>
+                        <div class="title" data-en="Products sold " data-ar="منتجاتنا المباعة "
+                            data-fr="Produits vendus" data-es="Productos vendidos ">
+                            Products sold
+                        </div>
+                        <div class="bg-2"></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in">
+                    <div class="counter-box text-center">
+                        <div class="bg"></div>
+                        <div class="icon"><i class="fas fa-users"></i></div>
+                        <div class="number" data-target="2000000" data-display="2M+">
+                            2M+
+                        </div>
+
+                        <div class="title" data-en="Consumers" data-ar="عدد المستهلكين"
+                            data-fr="Nombre de consommateurs" data-es="Número de consumidores">
+                            Consumers
+                        </div>
+                        <div class="bg-2"></div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in">
+                    <div class="counter-box text-center">
+                        <div class="bg"></div>
+                        <div class="icon"><i class="fas fa-user-tie"></i></div>
+                        <div class="number" data-target="350">0</div>
+                        <div class="title" data-en="Employees" data-ar="الموظفين" data-fr="Employés"
+                            data-es="Empleados">
+                            Employees
+                        </div>
+                        <div class="bg-2"></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in">
+                    <div class="counter-box text-center">
+                        <div class="bg"></div>
+                        <div class="icon"><i class="fas fa-handshake"></i></div>
+                        <div class="number" data-target="8">0</div>
+                        <div class="title" data-en="Partners" data-ar="شركائنا" data-fr="Nos partenaires"
+                            data-es="Nuestros socios">
+                            Partners
+                        </div>
+                        <div class="bg-2"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="catalog-section py-5">
+        <div class="container">
+            <div class="row g-4 align-items-center justify-content-center">
+                <div class="col-lg-6 text-center">
+                    <div class="catalog-content">
+                        <p class="catalog-text" data-en="To view the e-catalog" data-ar="لعرض الكتالوج الإلكتروني"
+                            data-fr="Voir le catalogue électronique" data-es="Ver el catálogo electrónico">
+                            To view the e-catalog
+                        </p>
+
+                        <a href="https://drive.google.com/file/d/1Qj_WeosZjg__YK3-xM5_KjjJB81vget4/view?usp=sharing" target="_blank" download class="catalog-btn">
+                            <i class="fa-solid fa-file-arrow-down fa-bounce"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="catalog-image">
+                        <img src="assets/catalog.png" alt="E-Catalog" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section">
+        <div class="container py-5">
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-4 col-md-6 d-flex align-items-center">
+                    <div class="footer-logo d-flex align-items-center gap-0">
+                        <img src="assets/logo.png" alt="ee and honey" height="100">
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title" data-en="Links" data-ar="روابط" data-es="Enlaces" data-fr="Liens">
+                        Links
+                    </h5>
+
+                    <ul class="footer-links">
+                        <li>
+                            <a href="index.html" data-en="Home" data-ar="الرئيسية" data-es="Inicio" data-fr="Accueil">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about-us.html" data-en="About Us" data-ar="من نحن" data-es="Sobre Nosotros"
+                                data-fr="À propos">
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="categories.html" data-en="Products" data-ar="المنتجات" data-es="Productos"
+                                data-fr="Produits">
+                                Products
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-en="Partner" data-ar="شركاؤنا" data-es="Socio" data-fr="Partenaire">
+                                Partner
+                            </a>
+                        </li>
+                        <li>
+                            <a href="news-blogs.html" data-en="News" data-ar="الأخبار" data-es="Noticias"
+                                data-fr="Actualités">
+                                News
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact-us.html" data-en="Contact Us" data-ar="تواصل معنا" data-es="Contáctanos"
+                                data-fr="Contactez-nous">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title" data-en="Products" data-ar="المنتجات" data-es="Productos"
+                        data-fr="Produits">
+                        Products
+                    </h5>
+
+                    <ul class="footer-links">
+                        <li>
+                            <a href="products.html" data-en="Honey Products" data-ar="منتجات العسل"
+                                data-es="Productos de miel" data-fr="Produits de miel">
+                                Honey Products
+                            </a>
+                        </li>
+                        <li>
+                            <a href="products.html" data-en="Creamed Honey" data-ar="العسل الكريمي"
+                                data-es="Miel cremado" data-fr="Miel crémeux">
+                                Creamed Honey
+                            </a>
+                        </li>
+                        <li>
+                            <a href="products.html" data-en="Drinks" data-ar="المشروبات" data-es="Bebidas"
+                                data-fr="Boissons">
+                                Drinks
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title" data-en="Newsletter" data-ar="النشرة الإخبارية" data-es="Boletín"
+                        data-fr="Newsletter">
+                        Newsletter
+                    </h5>
+
+                    <p class="footer-text"
+                        data-en="Sign Up For Our Email List To Receive Sweet Deals, Company News And More From Bee & Honey."
+                        data-ar="اشترك في قائمتنا البريدية لتصلك عروض حلوة، وأخبار الشركة والمزيد من Bee & Honey."
+                        data-es="Suscríbete a nuestra lista de correo para recibir ofertas dulces, noticias de la empresa y más de Bee & Honey."
+                        data-fr="Inscrivez-vous à notre liste de diffusion pour recevoir des offres spéciales, des nouvelles de l'entreprise et plus de Bee & Honey.">
+                        Sign Up For Our Email List To Receive Sweet Deals, Company News And More From Bee & Honey.
+                    </p>
+
+                    <form class="newsletter-form mt-4">
+                        <input type="email" placeholder="Email Address" data-placeholder-en="Email Address"
+                            data-placeholder-ar="البريد الإلكتروني" data-placeholder-es="Correo electrónico"
+                            data-placeholder-fr="Adresse e-mail" required>
+                        <button type="submit" data-en="Submit" data-ar="إرسال" data-es="Enviar" data-fr="Envoyer">
+                            Submit
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <div class="modal fade" id="certificateModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" data-en="Certificate" data-ar="شهادة" data-es="Certificado"
+                        data-fr="Certificat">
+                        Certificate
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="cert-viewer">
+                        <div class="cert-controls mb-2">
+                            <button class="btn btn-sm btn-outline-primary" id="zoom-in">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <button class="btn btn-sm btn-outline-primary" id="zoom-out">
+                                <i class="fas fa-search-minus"></i>
+                            </button>
+                        </div>
+                        <div class="cert-image-container d-flex flex-column align-items-center gap-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="whatsapp-wrapper">
+        <span class="whatsapp-message" data-en="Need help?" data-ar="هل تحتاج مساعدة؟" data-es="Necesitas ayuda?"
+            data-fr="Besoin d'aide ?">
+            Need help?
+        </span>
+
+
+        <a href="#" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/certificate.js"></script>
+    <script src="js/map.js"></script>
+
+
+
+</body>
+
+</html>

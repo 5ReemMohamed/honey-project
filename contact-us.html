@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body data-success-title-en="Message Sent!" data-success-title-ar="تم الإرسال" data-success-title-es="Mensaje enviado"
+    data-success-title-fr="Message envoyé" data-success-text-en="Your message has been sent successfully."
+    data-success-text-ar="تم إرسال رسالتك بنجاح" data-success-text-es="Mensaje enviado correctamente"
+    data-success-text-fr="Votre message a été envoyé avec succès">
+    <nav class="navbar navbar-expand-lg shadow-sm" id="mainNavbar">
+        <div class="container-lg ">
+            <a class="navbar-brand" href="index.html">
+                <div class="logo-icon">
+                    <img src="assets/logo.png" height="70" class="w-100 dark-logo">
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto gap-3 text-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html" data-en="Home" data-ar="الرئيسية"
+                            data-es="Inicio" data-fr="Accueil">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about-us.html" data-en="About Us" data-ar="من نحن"
+                            data-es="Sobre Nosotros" data-fr="À propos">About Us</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="categories.html" data-en="Products"
+                            data-ar="المنتجات" data-es="Productos" data-fr="Produits">Products</a>
+                    </li>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-en="Partners" data-ar="شركاؤنا"
+                            data-es="Socios" data-fr="Partenaires">Partners</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news-blogs.html" data-en="News" data-ar="الأخبار"
+                            data-es="Noticias" data-fr="Actualités">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" data-en="Contact Us" data-ar="تواصل معنا"
+                            data-es="Contáctanos" data-fr="Contactez-nous">Contact
+                            Us</a></li>
+                </ul>
+                <div class="dropdown p-4 p-lg-0 d-flex justify-content-center align-items-center">
+                    <button class="btn btn-warning dropdown-toggle" type="button" id="languageDropdown"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Language
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
+                        <li><a class="dropdown-item" href="#" data-lang="ar">Arabic</a></li>
+                        <li><a class="dropdown-item" href="#" data-lang="es">Spanish</a></li>
+                        <li><a class="dropdown-item" href="#" data-lang="fr">French</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="py-5 contact" id="contact">
+        <div class="container py-5">
+            <div class="heading mb-5 pt-5 text-center" data-aos="fade-up">
+                <h2 data-en="Get in touch with us!" data-ar="تواصل معنا!" data-es="¡Ponte en contacto con nosotros!"
+                    data-fr="Prenez contact avec nous !">
+                    Get in touch with us!
+                </h2>
+
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-5" data-aos="fade-up">
+                    <div class="left-side p-4">
+                        <div class="contact-info">
+                            <div class="phone d-flex align-items-center justify-content-between">
+                                <div class="info-header d-flex align-items-center gap-2">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </div>
+                                    <h3 data-en="Phone" data-ar="الهاتف" data-es="Teléfono" data-fr="Téléphone">
+                                        Phone
+                                    </h3>
+
+                                </div>
+                                <a href="tel:+96262221118">+962 6 222 111 8</a>
+                            </div>
+                            <div class="email d-flex align-items-center justify-content-between">
+                                <div class="info-header d-flex align-items-center gap-2">
+                                    <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                                    <h3 data-en="Email" data-ar="البريد الإلكتروني" data-es="Correo electrónico"
+                                        data-fr="E-mail">
+                                        Email
+                                    </h3>
+
+                                </div>
+                                <a href="mailto:info@bee-and-honey.com">
+                                    info@bee-and-honey.com
+                                </a>
+                            </div>
+                            <div class="location d-flex align-items-center justify-content-between">
+                                <div class="info-header d-flex align-items-center gap-2">
+                                    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                                    <h3 data-en="Location" data-ar="الموقع" data-es="Ubicación" data-fr="Emplacement">
+                                        Location
+                                    </h3>
+
+                                </div>
+                                <a href="#" data-en="Jordan Salt Industrial City" data-ar="مدينة السلط الصناعية"
+                                    data-es="Ciudad Industrial de Sal de Jordania"
+                                    data-fr="Ville industrielle de sel de Jordanie">
+                                    Jordan Salt Industrial City
+                                </a>
+
+                            </div>
+                            <div class="social d-flex align-items-center justify-content-between">
+                                <div class="info-header d-flex align-items-center gap-2">
+                                    <div class="icon"><i class="fa-solid fa-share-nodes"></i></div>
+                                    <h3 data-en="Follow Us" data-ar="تابعنا" data-es="Síguenos" data-fr="Suivez-nous">
+                                        Follow Us
+                                    </h3>
+
+                                </div>
+
+                                <div class="icons d-flex flex-wrap gap-2">
+                                    <a href="#" aria-label="Instagram">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                    <a href="#" aria-label="Facebook">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" aria-label="Twitter">
+                                        <i class="fa-brands fa-x-twitter"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-up">
+                    <div class="form">
+                        <form id="contactForm" novalidate>
+                            <h3 class="text-center mb-5" data-en="Feel Free To Contact Us"
+                                data-ar="لا تتردد في التواصل معنا" data-fr="N’hésitez pas à nous contacter"
+                                data-es="No dudes en contactarnos">
+                                Feel Free To Contact Us
+                            </h3>
+
+
+                            <div class="form-group">
+                                <input type="text" id="name" class="form-control" data-placeholder-en="Your Name"
+                                    data-placeholder-ar="اسمك" data-placeholder-es="Tu Nombre"
+                                    data-placeholder-fr="Votre Nom" data-required-en="Name is required"
+                                    data-required-ar="الاسم مطلوب" data-required-es="Se requiere el nombre"
+                                    data-required-fr="Le nom est requis" placeholder="Your Name">
+                                <small class="error-msg"></small>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="tel" id="phone" class="form-control" data-placeholder-en="Your Phone"
+                                    data-placeholder-ar="رقم هاتفك" data-placeholder-es="Tu Teléfono"
+                                    data-placeholder-fr="Votre Téléphone" data-required-en="Phone is required"
+                                    data-required-ar="رقم الهاتف مطلوب" data-required-es="Se requiere teléfono"
+                                    data-required-fr="Téléphone requis" placeholder="Your Phone">
+                                <small class="error-msg"></small>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" id="email" class="form-control" data-placeholder-en="Your Email"
+                                    data-placeholder-ar="البريد الإلكتروني" data-required-en="Email is required"
+                                    data-required-ar="البريد الإلكتروني مطلوب"
+                                    data-regex="^[\w\.-]+@([\w-]+\.)+[\w-]{2,4}$" data-error-en="Invalid email format"
+                                    data-error-ar="صيغة البريد الإلكتروني غير صحيحة" placeholder="Your Email">
+                                <small class="error-msg"></small>
+
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" id="subject" class="form-control" data-placeholder-en="Subject"
+                                    data-placeholder-ar="الموضوع" data-placeholder-es="Asunto"
+                                    data-placeholder-fr="Sujet" data-required-en="Subject is required"
+                                    data-required-ar="الموضوع مطلوب" data-required-es="Se requiere asunto"
+                                    data-required-fr="Sujet requis" placeholder="Subject">
+                                <small class="error-msg"></small>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea id="message" class="form-control" rows="5" data-placeholder-en="Message"
+                                    data-placeholder-ar="رسالتك" data-placeholder-es="Mensaje"
+                                    data-placeholder-fr="Message" data-required-en="Message is required"
+                                    data-required-ar="الرسالة مطلوبة" data-required-es="Se requiere mensaje"
+                                    data-required-fr="Message requis" placeholder="Message"></textarea>
+                                <small class="error-msg"></small>
+                            </div>
+
+                            <button type="submit" class="btn btn-submit" data-en="Send Message" data-ar="إرسال الرسالة"
+                                data-es="Enviar Mensaje" data-fr="Envoyer le message">
+                                Send Message
+                            </button>
+
+                        </form>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer-section">
+        <div class="container py-5">
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-4 col-md-6 d-flex align-items-center">
+                    <div class="footer-logo d-flex align-items-center gap-0">
+                        <img src="assets/logo.png" alt="ee and honey" height="100">
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title" data-en="Links" data-ar="روابط" data-es="Enlaces" data-fr="Liens">
+                        Links
+                    </h5>
+
+                    <ul class="footer-links">
+                        <li>
+                            <a href="index.html" data-en="Home" data-ar="الرئيسية" data-es="Inicio" data-fr="Accueil">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about-us.html" data-en="About Us" data-ar="من نحن" data-es="Sobre Nosotros"
+                                data-fr="À propos">
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="categories.html" data-en="Products" data-ar="المنتجات" data-es="Productos"
+                                data-fr="Produits">
+                                Products
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-en="Partner" data-ar="شركاؤنا" data-es="Socio" data-fr="Partenaire">
+                                Partner
+                            </a>
+                        </li>
+                        <li>
+                            <a href="news-blogs.html" data-en="News" data-ar="الأخبار" data-es="Noticias"
+                                data-fr="Actualités">
+                                News
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" data-en="Contact Us" data-ar="تواصل معنا" data-es="Contáctanos"
+                                data-fr="Contactez-nous">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title" data-en="Products" data-ar="المنتجات" data-es="Productos"
+                        data-fr="Produits">
+                        Products
+                    </h5>
+
+                    <ul class="footer-links">
+                        <li>
+                            <a href="products.html" data-en="Honey Products" data-ar="منتجات العسل"
+                                data-es="Productos de miel" data-fr="Produits de miel">
+                                Honey Products
+                            </a>
+                        </li>
+                        <li>
+                            <a href="products.html" data-en="Creamed Honey" data-ar="العسل الكريمي"
+                                data-es="Miel cremado" data-fr="Miel crémeux">
+                                Creamed Honey
+                            </a>
+                        </li>
+                        <li>
+                            <a href="products.html" data-en="Drinks" data-ar="المشروبات" data-es="Bebidas"
+                                data-fr="Boissons">
+                                Drinks
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title" data-en="Newsletter" data-ar="النشرة الإخبارية" data-es="Boletín"
+                        data-fr="Newsletter">
+                        Newsletter
+                    </h5>
+
+                    <p class="footer-text"
+                        data-en="Sign Up For Our Email List To Receive Sweet Deals, Company News And More From Bee & Honey."
+                        data-ar="اشترك في قائمتنا البريدية لتصلك عروض حلوة، وأخبار الشركة والمزيد من Bee & Honey."
+                        data-es="Suscríbete a nuestra lista de correo para recibir ofertas dulces, noticias de la empresa y más de Bee & Honey."
+                        data-fr="Inscrivez-vous à notre liste de diffusion pour recevoir des offres spéciales, des nouvelles de l'entreprise et plus de Bee & Honey.">
+                        Sign Up For Our Email List To Receive Sweet Deals, Company News And More From Bee & Honey.
+                    </p>
+
+                    <form class="newsletter-form mt-4">
+                        <input type="email" placeholder="Email Address" data-placeholder-en="Email Address"
+                            data-placeholder-ar="البريد الإلكتروني" data-placeholder-es="Correo electrónico"
+                            data-placeholder-fr="Adresse e-mail" required>
+                        <button type="submit" data-en="Submit" data-ar="إرسال" data-es="Enviar" data-fr="Envoyer">
+                            Submit
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <div class="whatsapp-wrapper">
+        <span class="whatsapp-message" data-en="Need help?" data-ar="هل تحتاج مساعدة؟" data-es="Necesitas ayuda?"
+            data-fr="Besoin d'aide ?">
+            Need help?
+        </span>
+
+        <a href="#" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+
+
+
+
+</body>
+
+</html>
