@@ -1,0 +1,53 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Saudi Arabia" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[34.5,29.5],[36.5,29.5],[38.5,29],[40.5,28.5],[42.5,28],[44.5,27.5],[46.5,27],[48.5,26],[50.5,25],[52.5,24],[54.5,23],[55.5,22],[55,20],[52,18],[48,17],[45,16],[42,17],[39,18],[36,20],[35,22],[34.5,24],[34.5,29.5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "United Arab Emirates" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[51.5,25],[56.5,25],[56.5,22.5],[54,22.5],[52,23],[51.5,25]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Qatar" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[50.5,26],[51.5,26],[51.5,24.5],[50.5,24.5],[50.5,26]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Oman" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[55.5,26],[60,26],[60,16],[55,16],[55.5,26]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Jordan" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[35,33],[39,33],[39,29],[35,29],[35,33]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Yemen" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[42,18],[55,18],[55,12],[42,12],[42,18]]]
+      }
+    }
+  ]
+}
