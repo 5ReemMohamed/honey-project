@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         certImageContainer.innerHTML = '';
         imageArray.forEach((src, index) => {
             const imgWrapper = document.createElement('div');
-            imgWrapper.className = 'cert-img-wrapper w-100 mb-3 position-relative';
+            imgWrapper.className = 'cert-img-wrapper position-relative w-100';
 
             const img = document.createElement('img');
             img.src = src;
@@ -33,7 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
             img.style.cursor = 'pointer';
             img.style.transition = 'transform 0.3s ease';
             img.style.maxWidth = '100%';
-            img.style.objectFit = 'contain';
+            img.style.Width = '100%';
+            img.style.objectFit = 'cover';
             img.style.transform = `scale(${scale})`;
 
             if (imageArray.length > 1) {
